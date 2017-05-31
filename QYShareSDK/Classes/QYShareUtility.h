@@ -10,6 +10,9 @@
 #import "QYShareDelegate.h"
 #import "QYSharePlatforms.h"
 
+#import "WXApi.h"
+
+
 typedef NS_ENUM(NSUInteger, QYShareType)
 {
     QYShareTypeImage,
@@ -17,12 +20,16 @@ typedef NS_ENUM(NSUInteger, QYShareType)
     QYShareTypeVideo,
 };
 
+@class TencentOAuth;
 @interface QYShareUtility : NSObject
 
-- (instancetype)shareInstanced;
 
-- (void)registPlatform:(NSDictionary<NSString * ,NSString* > *)platformDic;
+@property(nonnull,strong) TencentOAuth * tencentOAuth;
 
-- (void)share:(id<QYShareDelegate>) obj toPlatform:(NSString *) platform shareType:(QYShareType)type;
++ (instancetype _Nullable )shareInstanced;
+
+- (void)registPlatform:(NSDictionary<NSString * ,NSString* > *_Nonnull)platformDic;
+
+- (void)share:(id <QYShareDelegate> _Nonnull) obj toPlatform:(NSString *_Nonnull) platform shareType:(QYShareType)type;
 
 @end

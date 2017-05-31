@@ -8,23 +8,18 @@
 
 #import "QYShareUtility.h"
 
-
 #import "WeiboSDK.h"
 #import <TencentOpenAPI/QQApiInterfaceObject.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/TencentApiInterface.h>
 
-#import "WXApi.h"
-
 @interface QYShareUtility ()
-
-@property(nonnull,strong) TencentOAuth * tencentOAuth;
 @end
 
 @implementation QYShareUtility
 
-- (instancetype)shareInstanced{
++ (instancetype)shareInstanced{
 
     static QYShareUtility * utility ;
     static dispatch_once_t onceToken;
@@ -38,26 +33,24 @@
     return utility;
 }
 
+- (instancetype) init{
+
+    self = [super init];
+    if (self) {
+        initPlartformsNames();
+    }
+    
+    return self;
+}
 - (void)share:(id<QYShareDelegate>) obj toPlatform:(NSString *) platform shareType:(QYShareType)type
 {
-    
-    SHARE_PLARTFORM_QQ = @"qy_share_to_qq";
-    SHARE_PLARTFORM_WX = @"qy_share_to_wxCONTACT";
-    SHARE_PLARTFORM_WXLINE = @"qy_share_to_wxLine";
-    SHARE_PLARTFORM_INS = @"qy_share_to_ins";
-    SHARE_PLARTFORM_FACEBOOK = @"qy_share_to_faceBook";
-    SHARE_PLARTFORM_MESSAGER = @"qy_share_to_messager";
-    SHARE_PLARTFORM_SINAWB = @"qy_share_to_sinaWB";
-    SHARE_PLARTFORM_TWITTER = @"qy_share_to_twitter";
-    SHARE_PLARTFORM_WHATAPP = @"qy_share_to_whateApp";
-    SHARE_PLARTFORM_MORE = @"qu_share_to_system_more";
 }
 - (void)registPlatform:(NSDictionary<NSString * ,NSString* > *)platformDic{
 
     [platformDic enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
         
         NSString * platform = [[key componentsSeparatedByString:@"_"] lastObject];
-        if ([platform isEqualToString:@"wxCONTACT"] || [platform isEqualToString:@"wxLine"])
+        if ([key isEqualToString:SHARE_PLARTFORM_WXLINE] || [key isEqualToString:SHARE_PLARTFORM_WX])
         {
             platform = @"wx";
         }

@@ -18,6 +18,7 @@ NSString * SHARE_PLARTFORM_SINAWB;   ///<* 新浪微博
 NSString * SHARE_PLARTFORM_TWITTER;  ///<* 推特
 NSString * SHARE_PLARTFORM_WHATAPP;  ///<* whatApp
 NSString * SHARE_PLARTFORM_MORE;     ///<* 系统更多
+NSString * SHAREMESSAGEWEBPAGEURL;
 
 void initPlartformsNames()
 {
@@ -32,4 +33,6 @@ void initPlartformsNames()
     SHARE_PLARTFORM_TWITTER = @"qy_share_to_twitter";
     SHARE_PLARTFORM_WHATAPP = @"qy_share_to_whateApp";
     SHARE_PLARTFORM_MORE = @"qu_share_to_system_more";
+    SHAREMESSAGEWEBPAGEURL =@"http://www.yoyoim.com";
+
 }

@@ -20,4 +20,5 @@ extern NSString * SHARE_PLARTFORM_TWITTER;  ///<* 推特
 extern NSString * SHARE_PLARTFORM_WHATAPP;  ///<* whatApp
 extern NSString * SHARE_PLARTFORM_MORE;     ///<* 系统更多
 
+extern NSString * SHAREMESSAGEWEBPAGEURL;
 void initPlartformsNames();
