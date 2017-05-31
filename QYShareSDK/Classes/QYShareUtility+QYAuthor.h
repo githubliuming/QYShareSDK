@@ -8,10 +8,12 @@
 
 #import "QYShareUtility.h"
 
-
 /**
  各个平台的授权类
  */
 @interface QYShareUtility (QYAuthor)
 
++ (BOOL) hasAuthor:(NSString *) platformName;
+
+- (void)author:(NSString *)platformName;
 @end

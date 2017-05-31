@@ -23,7 +23,7 @@ void initPlartformsNames()
 {
 
     SHARE_PLARTFORM_QQ = @"qy_share_to_qq";
-    SHARE_PLARTFORM_WX = @"qy_share_to_wxCont";
+    SHARE_PLARTFORM_WX = @"qy_share_to_wxCONTACT";
     SHARE_PLARTFORM_WXLINE = @"qy_share_to_wxLine";
     SHARE_PLARTFORM_INS = @"qy_share_to_ins";
     SHARE_PLARTFORM_FACEBOOK = @"qy_share_to_faceBook";
