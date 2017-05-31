@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47204D1B1EDEE89E0001B432 /* QYShareUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D1A1EDEE89E0001B432 /* QYShareUtility.m */; };
+		47204D1F1EDEEBBA0001B432 /* QYShareUtility+QYAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D1E1EDEEBBA0001B432 /* QYShareUtility+QYAuthor.m */; };
+		47204D221EDEECBA0001B432 /* QYShareUtility+QYShareToQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D211EDEECBA0001B432 /* QYShareUtility+QYShareToQQ.m */; };
+		47204D251EDEECD70001B432 /* QYShareUtility+QYShareToWX.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D241EDEECD70001B432 /* QYShareUtility+QYShareToWX.m */; };
+		47204D281EDEED140001B432 /* QYShareUtility+QYShareToSina.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D271EDEED140001B432 /* QYShareUtility+QYShareToSina.m */; };
+		47204D2B1EDEED4C0001B432 /* QYShareUtility+QYShareToIns.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D2A1EDEED4C0001B432 /* QYShareUtility+QYShareToIns.m */; };
+		47204D2E1EDEED7A0001B432 /* QYShareUtility+QYShareToFaceBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D2D1EDEED7A0001B432 /* QYShareUtility+QYShareToFaceBook.m */; };
+		47204D311EDEEDA40001B432 /* QYShareUtility+QYTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D301EDEEDA40001B432 /* QYShareUtility+QYTwitter.m */; };
+		47204D341EDEEDC90001B432 /* QYShareUtility+QYShareWhatApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D331EDEEDC90001B432 /* QYShareUtility+QYShareWhatApp.m */; };
+		47204D371EDEEE050001B432 /* QYShareUtility+QYShareMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 47204D361EDEEE050001B432 /* QYShareUtility+QYShareMore.m */; };
 		A0C4ED711EDECD6A00E3C45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED701EDECD6A00E3C45C /* main.m */; };
 		A0C4ED741EDECD6A00E3C45C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED731EDECD6A00E3C45C /* AppDelegate.m */; };
 		A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED761EDECD6A00E3C45C /* ViewController.m */; };
@@ -17,6 +27,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47204D191EDEE89E0001B432 /* QYShareUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYShareUtility.h; sourceTree = "<group>"; };
+		47204D1A1EDEE89E0001B432 /* QYShareUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYShareUtility.m; sourceTree = "<group>"; };
+		47204D1C1EDEEA830001B432 /* QYShareDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYShareDelegate.h; sourceTree = "<group>"; };
+		47204D1D1EDEEBB90001B432 /* QYShareUtility+QYAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYShareUtility+QYAuthor.h"; sourceTree = "<group>"; };
+		47204D1E1EDEEBBA0001B432 /* QYShareUtility+QYAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYShareUtility+QYAuthor.m"; sourceTree = "<group>"; };
+		47204D201EDEECBA0001B432 /* QYShareUtility+QYShareToQQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYShareUtility+QYShareToQQ.h"; sourceTree = "<group>"; };
+		47204D211EDEECBA0001B432 /* QYShareUtility+QYShareToQQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYShareUtility+QYShareToQQ.m"; sourceTree = "<group>"; };
+		47204D231EDEECD70001B432 /* QYShareUtility+QYShareToWX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYShareUtility+QYShareToWX.h"; sourceTree = "<group>"; };
+		47204D241EDEECD70001B432 /* QYShareUtility+QYShareToWX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYShareUtility+QYShareToWX.m"; sourceTree = "<group>"; };
+		47204D261EDEED140001B432 /* QYShareUtility+QYShareToSina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYShareUtility+QYShareToSina.h"; sourceTree = "<group>"; };
+		47204D271EDEED140001B432 /* QYShareUtility+QYShareToSina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYShareUtility+QYShareToSina.m"; sourceTree = "<group>"; };
+		47204D291EDEED4C0001B432 /* QYShareUtility+QYShareToIns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYShareUtility+QYShareToIns.h"; sourceTree = "<group>"; };
+		47204D2A1EDEED4C0001B432 /* QYShareUtility+QYShareToIns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYShareUtility+QYShareToIns.m"; sourceTree = "<group>"; };
+		47204D2C1EDEED7A0001B432 /* QYShareUtility+QYShareToFaceBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYShareUtility+QYShareToFaceBook.h"; sourceTree = "<group>"; };
+		47204D2D1EDEED7A0001B432 /* QYShareUtility+QYShareToFaceBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYShareUtility+QYShareToFaceBook.m"; sourceTree = "<group>"; };
+		47204D2F1EDEEDA40001B432 /* QYShareUtility+QYTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYShareUtility+QYTwitter.h"; sourceTree = "<group>"; };
+		47204D301EDEEDA40001B432 /* QYShareUtility+QYTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYShareUtility+QYTwitter.m"; sourceTree = "<group>"; };
+		47204D321EDEEDC90001B432 /* QYShareUtility+QYShareWhatApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYShareUtility+QYShareWhatApp.h"; sourceTree = "<group>"; };
+		47204D331EDEEDC90001B432 /* QYShareUtility+QYShareWhatApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYShareUtility+QYShareWhatApp.m"; sourceTree = "<group>"; };
+		47204D351EDEEE050001B432 /* QYShareUtility+QYShareMore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYShareUtility+QYShareMore.h"; sourceTree = "<group>"; };
+		47204D361EDEEE050001B432 /* QYShareUtility+QYShareMore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYShareUtility+QYShareMore.m"; sourceTree = "<group>"; };
 		A0C4ED6C1EDECD6A00E3C45C /* QYShareSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYShareSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C4ED701EDECD6A00E3C45C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0C4ED721EDECD6A00E3C45C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,7 +118,28 @@
 			isa = PBXGroup;
 			children = (
 				A0C4ED871EDECE7500E3C45C /* QYSharePlatforms.h */,
+				47204D1C1EDEEA830001B432 /* QYShareDelegate.h */,
 				A0C4ED881EDECE7500E3C45C /* QYSharePlatforms.m */,
+				47204D191EDEE89E0001B432 /* QYShareUtility.h */,
+				47204D1A1EDEE89E0001B432 /* QYShareUtility.m */,
+				47204D1D1EDEEBB90001B432 /* QYShareUtility+QYAuthor.h */,
+				47204D1E1EDEEBBA0001B432 /* QYShareUtility+QYAuthor.m */,
+				47204D201EDEECBA0001B432 /* QYShareUtility+QYShareToQQ.h */,
+				47204D211EDEECBA0001B432 /* QYShareUtility+QYShareToQQ.m */,
+				47204D231EDEECD70001B432 /* QYShareUtility+QYShareToWX.h */,
+				47204D241EDEECD70001B432 /* QYShareUtility+QYShareToWX.m */,
+				47204D261EDEED140001B432 /* QYShareUtility+QYShareToSina.h */,
+				47204D271EDEED140001B432 /* QYShareUtility+QYShareToSina.m */,
+				47204D291EDEED4C0001B432 /* QYShareUtility+QYShareToIns.h */,
+				47204D2A1EDEED4C0001B432 /* QYShareUtility+QYShareToIns.m */,
+				47204D2C1EDEED7A0001B432 /* QYShareUtility+QYShareToFaceBook.h */,
+				47204D2D1EDEED7A0001B432 /* QYShareUtility+QYShareToFaceBook.m */,
+				47204D2F1EDEEDA40001B432 /* QYShareUtility+QYTwitter.h */,
+				47204D301EDEEDA40001B432 /* QYShareUtility+QYTwitter.m */,
+				47204D321EDEEDC90001B432 /* QYShareUtility+QYShareWhatApp.h */,
+				47204D331EDEEDC90001B432 /* QYShareUtility+QYShareWhatApp.m */,
+				47204D351EDEEE050001B432 /* QYShareUtility+QYShareMore.h */,
+				47204D361EDEEE050001B432 /* QYShareUtility+QYShareMore.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -163,10 +215,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47204D2B1EDEED4C0001B432 /* QYShareUtility+QYShareToIns.m in Sources */,
+				47204D341EDEEDC90001B432 /* QYShareUtility+QYShareWhatApp.m in Sources */,
+				47204D221EDEECBA0001B432 /* QYShareUtility+QYShareToQQ.m in Sources */,
 				A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */,
+				47204D251EDEECD70001B432 /* QYShareUtility+QYShareToWX.m in Sources */,
+				47204D371EDEEE050001B432 /* QYShareUtility+QYShareMore.m in Sources */,
+				47204D2E1EDEED7A0001B432 /* QYShareUtility+QYShareToFaceBook.m in Sources */,
+				47204D1F1EDEEBBA0001B432 /* QYShareUtility+QYAuthor.m in Sources */,
+				47204D311EDEEDA40001B432 /* QYShareUtility+QYTwitter.m in Sources */,
 				A0C4ED741EDECD6A00E3C45C /* AppDelegate.m in Sources */,
 				A0C4ED891EDECE7500E3C45C /* QYSharePlatforms.m in Sources */,
+				47204D281EDEED140001B432 /* QYShareUtility+QYShareToSina.m in Sources */,
 				A0C4ED711EDECD6A00E3C45C /* main.m in Sources */,
+				47204D1B1EDEE89E0001B432 /* QYShareUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +387,7 @@
 				A0C4ED851EDECD6A00E3C45C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

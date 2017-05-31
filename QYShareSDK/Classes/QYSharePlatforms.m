@@ -19,7 +19,8 @@ NSString * SHARE_PLARTFORM_TWITTER;  ///<* 推特
 NSString * SHARE_PLARTFORM_WHATAPP;  ///<* whatApp
 NSString * SHARE_PLARTFORM_MORE;     ///<* 系统更多
 
-void initPlartformsNames(){
+void initPlartformsNames()
+{
 
     SHARE_PLARTFORM_QQ = @"qy_share_to_qq";
     SHARE_PLARTFORM_WX = @"qy_share_to_wxCont";
