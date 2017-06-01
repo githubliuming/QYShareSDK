@@ -12,5 +12,5 @@
  ins 平台分享
  */
 @interface QYShareUtility (QYShareToIns)
-
+- (void)ins_share:(id <QYShareDelegate> _Nonnull) obj toPlatform:(NSString *_Nonnull) platform shareType:(QYShareType)type;
 @end

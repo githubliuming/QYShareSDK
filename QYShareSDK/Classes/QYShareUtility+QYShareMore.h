@@ -10,4 +10,6 @@
 
 @interface QYShareUtility (QYShareMore)
 
+- (void)more_share:(id <QYShareDelegate> _Nonnull) obj toPlatform:(NSString *_Nonnull) platform shareType:(QYShareType)type;
+
 @end

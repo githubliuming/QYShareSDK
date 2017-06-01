@@ -13,5 +13,7 @@
  */
 @interface QYShareUtility (QYShareToFaceBook)
 
+- (void)faceBook_share:(id <QYShareDelegate> _Nonnull) obj toPlatform:(NSString *_Nonnull) platform shareType:(QYShareType)type;
 
+- (void)messager_share:(id <QYShareDelegate> _Nonnull) obj toPlatform:(NSString *_Nonnull) platform shareType:(QYShareType)type;
 @end

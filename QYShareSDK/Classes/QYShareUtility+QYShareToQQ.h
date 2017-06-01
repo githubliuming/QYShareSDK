@@ -13,4 +13,7 @@
  */
 @interface QYShareUtility (QYShareToQQ)
 
+
+- (void)qq_share:(id <QYShareDelegate> _Nonnull) obj toPlatform:(NSString *_Nonnull) platform shareType:(QYShareType)type;
+
 @end

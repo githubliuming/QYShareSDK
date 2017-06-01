@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "QYShareDelegate.h"
 
+
+@class QYShareModel;
 @interface QYShareTool : NSObject
 
 #pragma mark -- NSUserDefault
@@ -31,4 +34,16 @@
 + (NSData *)scaleThumbImageData:(UIImage *)myimage;
 
 + (NSData *)uu_imageData:(UIImage *)myimage;
+
+#pragma marrk - model转换
+- (QYShareModel *)convertToShareModel:(id<QYShareDelegate>) obj;
+@end
+
+
+@interface QYShareModel : NSObject
+
+@property(nonatomic,strong) NSString * title;
+@property(nonatomic,strong) NSString * content;
+@property(nonatomic,strong) id imageContext;
+@property(nonatomic,strong) NSString * url;
 @end

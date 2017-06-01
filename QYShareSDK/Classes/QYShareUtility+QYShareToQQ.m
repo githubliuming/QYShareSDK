@@ -14,6 +14,21 @@
 #import "QYShareTool.h"
 @implementation QYShareUtility (QYShareToQQ)
 
+
+- (void)qq_share:(id <QYShareDelegate> _Nonnull) obj toPlatform:(NSString *_Nonnull) platform shareType:(QYShareType)type{
+
+    if ([platform isEqualToString:SHARE_PLARTFORM_QQ])
+    {
+        //分享到QQ
+    }
+    
+    if ([platform isEqualToString:SHARE_PLARTFORM_QQZONE]) {
+        //分享到qq空间
+        
+    }
+}
+
+
 - (void)shareToQQFriend:(NSString *)title
                 content:(NSString *)content
                   image:(id)imageContext

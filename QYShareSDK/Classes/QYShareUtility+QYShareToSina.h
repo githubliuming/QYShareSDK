@@ -13,4 +13,5 @@
  */
 @interface QYShareUtility (QYShareToSina)
 
+- (void)sinaWB_share:(id <QYShareDelegate> _Nonnull) obj toPlatform:(NSString *_Nonnull) platform shareType:(QYShareType)type;
 @end

@@ -125,4 +125,33 @@
     }
     return data;
 }
+
+#pragma marrk - model转换
+- (QYShareModel *)convertToShareModel:(id<QYShareDelegate>) obj
+{
+    QYShareModel * shareModel = [[QYShareModel alloc] init];
+    if ([obj respondsToSelector:@selector(getShareUrl)]) {
+        
+        shareModel.url = [obj getShareUrl];
+    }
+    if ([obj respondsToSelector:@selector(getShareTitle)]) {
+
+        shareModel.title = [obj getShareTitle];
+    }
+    
+    if([obj respondsToSelector:@selector(getShareContent)]){
+    
+        shareModel.content = [obj getShareContent];
+    }
+    if ([obj respondsToSelector:@selector(getShareImageContext)]){
+        
+        shareModel.imageContext = [obj getShareImageContext];
+    }
+    return shareModel;
+}
+@end
+
+@implementation QYShareModel
+
+
 @end

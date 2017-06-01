@@ -10,6 +10,7 @@
 
 
 extern NSString * SHARE_PLARTFORM_QQ;  ///<* QQ
+extern NSString * SHARE_PLARTFORM_QQZONE; ///<* qqzone
 extern NSString * SHARE_PLARTFORM_WX;  ///<* 微信好友
 extern NSString * SHARE_PLARTFORM_WXLINE; ///<* 微信朋友圈
 extern NSString * SHARE_PLARTFORM_INS;     ///<* ins

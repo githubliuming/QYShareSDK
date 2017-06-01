@@ -13,4 +13,6 @@
  */
 @interface QYShareUtility (QYTwitter)
 
+- (void)twitter_share:(id <QYShareDelegate> _Nonnull) obj toPlatform:(NSString *_Nonnull) platform shareType:(QYShareType)type;
+
 @end
