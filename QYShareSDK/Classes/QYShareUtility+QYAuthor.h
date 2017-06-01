@@ -13,7 +13,7 @@
  */
 @interface QYShareUtility (QYAuthor)
 
-+ (BOOL) hasAuthor:(NSString *) platformName;
+- (BOOL) hasAuthor:(NSString *) platformName;
 
 - (void)author:(NSString *)platformName;
 @end

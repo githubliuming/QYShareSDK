@@ -24,7 +24,7 @@ void initPlartformsNames()
 {
 
     SHARE_PLARTFORM_QQ = @"qy_share_to_qq";
-    SHARE_PLARTFORM_WX = @"qy_share_to_wxCONTACT";
+    SHARE_PLARTFORM_WX = @"qy_share_to_wxContact";
     SHARE_PLARTFORM_WXLINE = @"qy_share_to_wxLine";
     SHARE_PLARTFORM_INS = @"qy_share_to_ins";
     SHARE_PLARTFORM_FACEBOOK = @"qy_share_to_faceBook";
@@ -33,6 +33,8 @@ void initPlartformsNames()
     SHARE_PLARTFORM_TWITTER = @"qy_share_to_twitter";
     SHARE_PLARTFORM_WHATAPP = @"qy_share_to_whateApp";
     SHARE_PLARTFORM_MORE = @"qu_share_to_system_more";
+    
+    
     SHAREMESSAGEWEBPAGEURL =@"http://www.yoyoim.com";
 
 }

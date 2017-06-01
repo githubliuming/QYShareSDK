@@ -20,21 +20,22 @@
 {
     if ([self canOpenFaceBook])
     {
-        //        [self saveToAlbum:videoPath
-        //              complandler:^(NSURL *url, NSError *error) {
-        //                  if (error == nil)
-        //                  {
-        //                      [self shareVideToFaceBookWithAlbumUrl:url];
-        //                  }
-        //                  else
-        //                  {
-        //                      [self showAlertWithTitle:NXLocalizedString(@"Local_storage_full")];
-        //                  }
-        //              }];
+                [QYShareTool saveToAlbum:videoPath
+                      complandler:^(NSURL *url, NSError *error) {
+                          if (error == nil)
+                          {
+                              [self shareVideToFaceBookWithAlbumUrl:url];
+                          }
+                          else
+                          {
+//                              [self showAlertWithTitle:NXLocalizedString(@"Local_storage_full")];
+                              NSLog(@"error  写入视频到相册失败  error info = %@",[error userInfo]);
+                          }
+                      }];
     }
     else
     {
-        //        [self showAlertWithTitle:NXLocalizedString(@"Not_Installed_Facebook")];
+        [self showNotInstallFaceBook];
     }
 }
 - (void)shareVideToFaceBookWithAlbumUrl:(NSURL *)url

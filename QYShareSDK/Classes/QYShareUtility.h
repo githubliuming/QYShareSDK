@@ -18,6 +18,7 @@ typedef NS_ENUM(NSUInteger, QYShareType)
     QYShareTypeImage,
     QYShareTypeText,
     QYShareTypeVideo,
+    QYShareTypeNews,
 };
 
 @class TencentOAuth;

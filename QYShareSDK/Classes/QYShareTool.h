@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface QYShareTool : NSObject
 
@@ -19,4 +20,15 @@
 
 #pragma mark -
 + (BOOL) canOpenUrl:(NSString *)urlShemes;
++ (void) openUrl:(NSURL *) url;
+
+#pragma mark - save to library
++ (void)saveToAlbum:(NSString *)videoPath complandler:(void (^)(NSURL *url, NSError *error))block;
+
++(void)saveImageToAlbum:(UIImage *) image complandler:(void (^)(NSURL *url, NSError *error))block;
+
+//图片不能大于32k
++ (NSData *)scaleThumbImageData:(UIImage *)myimage;
+
++ (NSData *)uu_imageData:(UIImage *)myimage;
 @end
