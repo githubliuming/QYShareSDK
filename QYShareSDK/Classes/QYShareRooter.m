@@ -50,6 +50,10 @@ static QYShareRooter * static_rooter = nil;
     [self.rooterMap setObject:interface forKey:@(platform)];
 }
 
+- (void)removeComonetWitPlatform:(QYSharePlatform)platform
+{
+    [self.rooterMap removeObjectForKey:@(platform)];
+}
 - (id<QYShareComponentBaseDelegate>)getShareInterfaceWithPlatform:(QYSharePlatform) platform
 {
     return self.rooterMap[@(platform)];

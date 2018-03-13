@@ -18,5 +18,8 @@
 -(void)addComponent:(id<QYShareComponentBaseDelegate>)interface
         forPlatform:(QYSharePlatform)platform;
 
+- (void)removeComonetWitPlatform:(QYSharePlatform)platform;
+
 - (id<QYShareComponentBaseDelegate>)getShareInterfaceWithPlatform:(QYSharePlatform) platform;
+
 @end

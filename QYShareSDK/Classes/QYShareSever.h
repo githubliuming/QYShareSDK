@@ -15,7 +15,18 @@
       platformType:(QYSharePlatform)platform
          shareType:(QYShareType)type;
 
-+(void)regesitDefaultComponent;
 
-+(void)addComponent:(id<QYShareComponentBaseDelegate>)interface forPlatform:(QYSharePlatform)platform;
+/**
+ 向路由表中注册新的组件
+ @param interface 组件对象
+ @param platform 平台
+ */
++(void)addComponent:(id<QYShareComponentBaseDelegate>)interface
+        forPlatform:(QYSharePlatform)platform;
+
+/**
+ 从路由表中移除组件
+ @param platform 平台
+ */
++ (void)removeComponetWithPlatfrom:(QYSharePlatform)platform;
 @end

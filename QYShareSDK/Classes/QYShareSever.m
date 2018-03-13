@@ -65,4 +65,8 @@
 {
     [[QYShareRooter shareInstanced] addComponent:interface forPlatform:platform];;
 }
++ (void)removeComponetWithPlatfrom:(QYSharePlatform)platform
+{
+    
+}
 @end
