@@ -17,6 +17,7 @@
 		47204D951EDEFF6A0001B432 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47204D941EDEFF6A0001B432 /* ImageIO.framework */; };
 		47204D971EDEFFB00001B432 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47204D961EDEFFB00001B432 /* CoreTelephony.framework */; };
 		47204D991EDEFFC50001B432 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47204D981EDEFFC50001B432 /* SystemConfiguration.framework */; };
+		4F8DE553C9E4F248171BEAAA /* libPods-QYShareSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3C1DF8C4C800A8F3E75A0 /* libPods-QYShareSDK.a */; };
 		A0C4ED711EDECD6A00E3C45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED701EDECD6A00E3C45C /* main.m */; };
 		A0C4ED741EDECD6A00E3C45C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED731EDECD6A00E3C45C /* AppDelegate.m */; };
 		A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED761EDECD6A00E3C45C /* ViewController.m */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FF3C1DF8C4C800A8F3E75A0 /* libPods-QYShareSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QYShareSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47204D801EDEFD8A0001B432 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		47204D821EDEFDC40001B432 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		47204D841EDEFDDD0001B432 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -39,6 +41,7 @@
 		47204D941EDEFF6A0001B432 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		47204D961EDEFFB00001B432 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		47204D981EDEFFC50001B432 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		57B5CCDCF5527D863D1D66B4 /* Pods-QYShareSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYShareSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-QYShareSDK/Pods-QYShareSDK.release.xcconfig"; sourceTree = "<group>"; };
 		A0C4ED6C1EDECD6A00E3C45C /* QYShareSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYShareSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C4ED701EDECD6A00E3C45C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0C4ED721EDECD6A00E3C45C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		A0C4ED7B1EDECD6A00E3C45C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0C4ED7E1EDECD6A00E3C45C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0C4ED801EDECD6A00E3C45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F191A3EEF37F254AAA1CF100 /* Pods-QYShareSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYShareSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QYShareSDK/Pods-QYShareSDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +70,22 @@
 				47204D851EDEFDDD0001B432 /* CFNetwork.framework in Frameworks */,
 				47204D831EDEFDC40001B432 /* Security.framework in Frameworks */,
 				47204D811EDEFD8A0001B432 /* libsqlite3.tbd in Frameworks */,
+				4F8DE553C9E4F248171BEAAA /* libPods-QYShareSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FBFA547C3206778C75CA91D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F191A3EEF37F254AAA1CF100 /* Pods-QYShareSDK.debug.xcconfig */,
+				57B5CCDCF5527D863D1D66B4 /* Pods-QYShareSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		47204D7F1EDEFD8A0001B432 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +102,7 @@
 				47204D841EDEFDDD0001B432 /* CFNetwork.framework */,
 				47204D821EDEFDC40001B432 /* Security.framework */,
 				47204D801EDEFD8A0001B432 /* libsqlite3.tbd */,
+				0FF3C1DF8C4C800A8F3E75A0 /* libPods-QYShareSDK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,6 +113,7 @@
 				A0C4ED6E1EDECD6A00E3C45C /* QYShareSDK */,
 				A0C4ED6D1EDECD6A00E3C45C /* Products */,
 				47204D7F1EDEFD8A0001B432 /* Frameworks */,
+				3FBFA547C3206778C75CA91D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0C4ED831EDECD6A00E3C45C /* Build configuration list for PBXNativeTarget "QYShareSDK" */;
 			buildPhases = (
+				A5FDA3FF43EDBAB185345CAB /* [CP] Check Pods Manifest.lock */,
 				A0C4ED681EDECD6A00E3C45C /* Sources */,
 				A0C4ED691EDECD6A00E3C45C /* Frameworks */,
 				A0C4ED6A1EDECD6A00E3C45C /* Resources */,
+				5D0878B7302961689881683E /* [CP] Embed Pods Frameworks */,
+				DA25B02759E0A0B455C90144 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,6 +217,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D0878B7302961689881683E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QYShareSDK/Pods-QYShareSDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5FDA3FF43EDBAB185345CAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QYShareSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA25B02759E0A0B455C90144 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QYShareSDK/Pods-QYShareSDK-resources.sh",
+				"${PODS_ROOT}/Weibo_SDK/libWeiboSDK/WeiboSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QYShareSDK/Pods-QYShareSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A0C4ED681EDECD6A00E3C45C /* Sources */ = {
@@ -326,6 +399,7 @@
 		};
 		A0C4ED841EDECD6A00E3C45C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F191A3EEF37F254AAA1CF100 /* Pods-QYShareSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -350,6 +424,7 @@
 		};
 		A0C4ED851EDECD6A00E3C45C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57B5CCDCF5527D863D1D66B4 /* Pods-QYShareSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
