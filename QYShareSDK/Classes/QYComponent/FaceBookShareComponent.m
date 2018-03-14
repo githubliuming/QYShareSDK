@@ -7,7 +7,7 @@
 //
 
 #import "FaceBookShareComponent.h"
-
+#import <FBSDKShareKit/FBSDKShareKit.h>
 @implementation FaceBookShareComponent
 
 @synthesize platform,delegate,shareType;

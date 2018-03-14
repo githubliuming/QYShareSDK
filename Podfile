@@ -13,4 +13,6 @@ target 'QYShareSDK' do
   pod 'Weibo_SDK', '3.2.3'
  # qq sdk
    pod 'TencentOpenAPI-Unofficial', '~> 3.3.0'
+#facebook
+   pod 'Facebook-iOS-SDK', '~> 4.1.0'
 end
