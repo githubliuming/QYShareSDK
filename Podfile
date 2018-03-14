@@ -12,5 +12,5 @@ target 'QYShareSDK' do
  # 新浪微博
   pod 'Weibo_SDK', '3.2.3'
  # qq sdk
-  pod 'TencentOpenApiSDK', '2.9.5'
+   pod 'TencentOpenAPI-Unofficial', '~> 3.3.0'
 end

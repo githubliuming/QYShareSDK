@@ -28,6 +28,11 @@ static QYShareRooter * static_rooter = nil;
     });
     return static_rooter;
 }
+- (void)setDelegate:(id<QYShareDelegate>)delegate
+{
+    _delegate = delegate;
+    [self qy_configDelegate];
+}
 - (void)registerDefualtComponent
 {
     id<QYShareToQQDelegate> qq = [[QQShareComponent alloc] init];
@@ -41,6 +46,15 @@ static QYShareRooter * static_rooter = nil;
     id<QYShareToSinaDelegate> sina = [[SinaWBShareComponent alloc] init];
     [self addComponent:sina forPlatform:QYSharePlatform_SinaWB];
     
+    [self qy_configDelegate];
+    
+}
+- (void)qy_configDelegate
+{
+    [self.rooterMap enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop)
+     {
+         ((id<QYShareComponentBaseDelegate>) obj).delegate = self.delegate;
+     }];
 }
 
 -(void)addComponent:(id<QYShareComponentBaseDelegate>)interface

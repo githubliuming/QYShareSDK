@@ -8,8 +8,26 @@
 
 #import "QYShareSever.h"
 #import "QYShareRooter.h"
+@interface QYShareSever()
+@property(nonatomic,weak)id<QYShareDelegate>delegate;
+@end
 @implementation QYShareSever 
 
+- (instancetype)initWithDelegate:(id<QYShareDelegate>)delegate
+{
+    self = [super init];
+    if (self)
+    {
+        self.delegate = delegate;
+        [QYShareRooter shareInstanced].delegate = self.delegate;
+    }
+    return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithDelegate:nil];
+}
 - (void)startShare:(id<QYShareConfig>)shareConfig
       platformType:(QYSharePlatform)platform
          shareType:(QYShareType)type
@@ -18,6 +36,8 @@
     id<QYShareComponentBaseDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
     if (interface)
     {
+        interface.platform = platform;
+        interface.shareType = type;
         [self qy_shareWithInterface:interface andShareConfig:shareConfig shareType:type];
     }
     else
@@ -31,29 +51,25 @@
                     shareType:(QYShareType)type
 {
     NSLog(@"share type = %ld",type);
-    if (type == QYShareTypeGif)
-    {
-        [interface shareGif:shareConfig];
-    }
-    else if (type == QYShareTypeUrl)
-    {
-        [interface shareUrl:shareConfig];
-    }
-    else if (type ==QYShareTypeText)
-    {
-        [interface shareText:shareConfig];
-    }
-    else if (type == QYShareTypeImage)
-    {
-        [interface shareImage:shareConfig];
-    }
-    else if (type == QYShareTypeVideo)
-    {
-        [interface shareVideo:shareConfig];
-    }
-    else
-    {
-        NSLog(@"未知分享类型");
+    switch (type) {
+        case QYShareTypeGif:
+            [interface shareGif:shareConfig];
+            break;
+        case QYShareTypeUrl:
+            [interface shareUrl:shareConfig];
+            break;
+        case QYShareTypeText:
+            [interface shareText:shareConfig];
+            break;
+        case QYShareTypeImage:
+            [interface shareImage:shareConfig];
+            break;
+        case QYShareTypeVideo:
+             [interface shareVideo:shareConfig];
+            break;
+        default:
+            NSLog(@"未知分享类型 %ld",type);
+            break;
     }
 }
 +(void)regesitDefaultComponent
@@ -67,6 +83,11 @@
 }
 + (void)removeComponetWithPlatfrom:(QYSharePlatform)platform
 {
-    
+    [[QYShareRooter shareInstanced]removeComonetWitPlatform:platform];
+}
+- (void)dealloc
+{
+    self.delegate = nil;
+    [QYShareRooter shareInstanced].delegate = nil;
 }
 @end

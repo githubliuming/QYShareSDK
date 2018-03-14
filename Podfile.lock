@@ -1,20 +1,18 @@
 PODS:
-  - TencentOpenApiSDK (2.9.5):
-    - TencentOpenApiSDK/Basic (= 2.9.5)
-  - TencentOpenApiSDK/Basic (2.9.5)
+  - TencentOpenAPI-Unofficial (3.3.0)
   - WechatOpenSDK (1.8.0)
   - Weibo_SDK (3.2.3)
 
 DEPENDENCIES:
-  - TencentOpenApiSDK (= 2.9.5)
+  - TencentOpenAPI-Unofficial (~> 3.3.0)
   - WechatOpenSDK (= 1.8.0)
   - Weibo_SDK (= 3.2.3)
 
 SPEC CHECKSUMS:
-  TencentOpenApiSDK: a0d7716edd6eb438d65828168e8e5137301b436d
+  TencentOpenAPI-Unofficial: 5c252c123b2557464d271ec1f94dbbc7545c26ee
   WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
   Weibo_SDK: 652ca78c2f7147a5de5e75e7cbea89838a81772a
 
-PODFILE CHECKSUM: a568a9d5920e1b1631bd99c72e4535267f4b87a4
+PODFILE CHECKSUM: cb26f915d528c3250bdf034e296e68fa3fc79e63
 
 COCOAPODS: 1.4.0

@@ -14,12 +14,12 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright (c) 2014 Tencent. All rights reserved.
+			<string>® 1998 - 2017 Tencent All Rights Reserved.
 </string>
 			<key>License</key>
-			<string>Copyright</string>
+			<string>LGPL</string>
 			<key>Title</key>
-			<string>TencentOpenApiSDK</string>
+			<string>TencentOpenAPI-Unofficial</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

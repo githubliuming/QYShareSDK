@@ -13,6 +13,8 @@
 
 + (instancetype)shareInstanced;
 
+@property(nonatomic,weak)id<QYShareDelegate>delegate;
+
 - (void)registerDefualtComponent;
 
 -(void)addComponent:(id<QYShareComponentBaseDelegate>)interface

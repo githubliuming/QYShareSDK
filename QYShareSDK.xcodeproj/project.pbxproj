@@ -23,6 +23,8 @@
 		8A348EA72057D56D00730BB8 /* QQShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A348EA62057D56D00730BB8 /* QQShareComponent.m */; };
 		8A348EAA2057D9E500730BB8 /* WXShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A348EA92057D9E500730BB8 /* WXShareComponent.m */; };
 		8A348EAD2057DA0000730BB8 /* SinaWBShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A348EAC2057DA0000730BB8 /* SinaWBShareComponent.m */; };
+		8A353D192058EFFE007CF2B5 /* QYShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A353D182058EFFE007CF2B5 /* QYShareTool.m */; };
+		8A353D1C20591FD2007CF2B5 /* FaceBookShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A353D1B20591FD2007CF2B5 /* FaceBookShareComponent.m */; };
 		A0C4ED711EDECD6A00E3C45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED701EDECD6A00E3C45C /* main.m */; };
 		A0C4ED741EDECD6A00E3C45C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED731EDECD6A00E3C45C /* AppDelegate.m */; };
 		A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED761EDECD6A00E3C45C /* ViewController.m */; };
@@ -59,6 +61,10 @@
 		8A348EA92057D9E500730BB8 /* WXShareComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXShareComponent.m; sourceTree = "<group>"; };
 		8A348EAB2057DA0000730BB8 /* SinaWBShareComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SinaWBShareComponent.h; sourceTree = "<group>"; };
 		8A348EAC2057DA0000730BB8 /* SinaWBShareComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaWBShareComponent.m; sourceTree = "<group>"; };
+		8A353D172058EFFE007CF2B5 /* QYShareTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYShareTool.h; sourceTree = "<group>"; };
+		8A353D182058EFFE007CF2B5 /* QYShareTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYShareTool.m; sourceTree = "<group>"; };
+		8A353D1A20591FD2007CF2B5 /* FaceBookShareComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceBookShareComponent.h; sourceTree = "<group>"; };
+		8A353D1B20591FD2007CF2B5 /* FaceBookShareComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceBookShareComponent.m; sourceTree = "<group>"; };
 		A0C4ED6C1EDECD6A00E3C45C /* QYShareSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYShareSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C4ED701EDECD6A00E3C45C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0C4ED721EDECD6A00E3C45C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 		8A348E9A2057AB4D00730BB8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8A353D162058EFEF007CF2B5 /* QYShareTool */,
 				8A348EA32057CD7900730BB8 /* QYComponent */,
 				8A348E9B2057AB7B00730BB8 /* QYShareConst.h */,
 				8A348E9C2057BDFE00730BB8 /* QYShareSever.h */,
@@ -147,8 +154,19 @@
 				8A348EA92057D9E500730BB8 /* WXShareComponent.m */,
 				8A348EAB2057DA0000730BB8 /* SinaWBShareComponent.h */,
 				8A348EAC2057DA0000730BB8 /* SinaWBShareComponent.m */,
+				8A353D1A20591FD2007CF2B5 /* FaceBookShareComponent.h */,
+				8A353D1B20591FD2007CF2B5 /* FaceBookShareComponent.m */,
 			);
 			path = QYComponent;
+			sourceTree = "<group>";
+		};
+		8A353D162058EFEF007CF2B5 /* QYShareTool */ = {
+			isa = PBXGroup;
+			children = (
+				8A353D172058EFFE007CF2B5 /* QYShareTool.h */,
+				8A353D182058EFFE007CF2B5 /* QYShareTool.m */,
+			);
+			path = QYShareTool;
 			sourceTree = "<group>";
 		};
 		A0C4ED631EDECD6A00E3C45C = {
@@ -305,10 +323,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QYShareSDK/Pods-QYShareSDK-resources.sh",
+				"${PODS_ROOT}/TencentOpenAPI-Unofficial/sdk/TencentOpenApi_IOS_Bundle.bundle",
 				"${PODS_ROOT}/Weibo_SDK/libWeiboSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,9 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */,
+				8A353D192058EFFE007CF2B5 /* QYShareTool.m in Sources */,
 				8A348EA72057D56D00730BB8 /* QQShareComponent.m in Sources */,
 				A0C4ED741EDECD6A00E3C45C /* AppDelegate.m in Sources */,
 				8A348EAD2057DA0000730BB8 /* SinaWBShareComponent.m in Sources */,
+				8A353D1C20591FD2007CF2B5 /* FaceBookShareComponent.m in Sources */,
 				A0C4ED711EDECD6A00E3C45C /* main.m in Sources */,
 				8A348E9E2057BDFE00730BB8 /* QYShareSever.m in Sources */,
 				8A348EA12057CB0A00730BB8 /* QYShareRooter.m in Sources */,
