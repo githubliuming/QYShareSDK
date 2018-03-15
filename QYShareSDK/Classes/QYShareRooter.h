@@ -15,13 +15,15 @@
 
 @property(nonatomic,weak)id<QYShareDelegate>delegate;
 
+@property(nonatomic,weak)id<QYShareComponentDelegate>currentComponent;
+
 - (void)registerDefualtComponent;
 
--(void)addComponent:(id<QYShareComponentBaseDelegate>)interface
+-(void)addComponent:(id<QYShareComponentDelegate>)interface
         forPlatform:(QYSharePlatform)platform;
 
 - (void)removeComonetWitPlatform:(QYSharePlatform)platform;
 
-- (id<QYShareComponentBaseDelegate>)getShareInterfaceWithPlatform:(QYSharePlatform) platform;
+- (id<QYShareComponentDelegate>)getShareInterfaceWithPlatform:(QYSharePlatform) platform;
 
 @end

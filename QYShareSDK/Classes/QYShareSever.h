@@ -11,8 +11,11 @@
 #import "QYShareComponentDelegate.h"
 //1、重定向url怎么传进来
 //2、剥离里面 philm的业务逻辑代码
-
+//3、确定FBSDKHashtag是否被删除
 @interface QYShareSever : NSObject
+
+- (instancetype) init NS_UNAVAILABLE;
++ (instancetype) new NS_UNAVAILABLE; 
 
 - (instancetype)initWithDelegate:(id<QYShareDelegate>)delegate;
 
@@ -24,7 +27,7 @@
  @param interface 组件对象
  @param platform 平台
  */
-+(void)addComponent:(id<QYShareComponentBaseDelegate>)interface
++(void)addComponent:(id<QYShareComponentDelegate>)interface
         forPlatform:(QYSharePlatform)platform;
 
 /**
@@ -32,4 +35,11 @@
  @param platform 平台
  */
 + (void)removeComponetWithPlatfrom:(QYSharePlatform)platform;
+
++ (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
+
++ (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation;
 @end

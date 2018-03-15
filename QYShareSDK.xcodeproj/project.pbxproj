@@ -25,6 +25,9 @@
 		8A348EAD2057DA0000730BB8 /* SinaWBShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A348EAC2057DA0000730BB8 /* SinaWBShareComponent.m */; };
 		8A353D192058EFFE007CF2B5 /* QYShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A353D182058EFFE007CF2B5 /* QYShareTool.m */; };
 		8A353D1C20591FD2007CF2B5 /* FaceBookShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A353D1B20591FD2007CF2B5 /* FaceBookShareComponent.m */; };
+		8A3EEA6E205A1BB60068A7F6 /* MessengerShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EEA6D205A1BB60068A7F6 /* MessengerShareComponent.m */; };
+		8A3EEA71205A21D50068A7F6 /* InstagramShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EEA70205A21D50068A7F6 /* InstagramShareComponent.m */; };
+		8A3EEA74205A24380068A7F6 /* TwitterShareComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EEA73205A24380068A7F6 /* TwitterShareComponet.m */; };
 		A0C4ED711EDECD6A00E3C45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED701EDECD6A00E3C45C /* main.m */; };
 		A0C4ED741EDECD6A00E3C45C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED731EDECD6A00E3C45C /* AppDelegate.m */; };
 		A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED761EDECD6A00E3C45C /* ViewController.m */; };
@@ -65,6 +68,12 @@
 		8A353D182058EFFE007CF2B5 /* QYShareTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYShareTool.m; sourceTree = "<group>"; };
 		8A353D1A20591FD2007CF2B5 /* FaceBookShareComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceBookShareComponent.h; sourceTree = "<group>"; };
 		8A353D1B20591FD2007CF2B5 /* FaceBookShareComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceBookShareComponent.m; sourceTree = "<group>"; };
+		8A3EEA6C205A1BB60068A7F6 /* MessengerShareComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessengerShareComponent.h; sourceTree = "<group>"; };
+		8A3EEA6D205A1BB60068A7F6 /* MessengerShareComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessengerShareComponent.m; sourceTree = "<group>"; };
+		8A3EEA6F205A21D50068A7F6 /* InstagramShareComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstagramShareComponent.h; sourceTree = "<group>"; };
+		8A3EEA70205A21D50068A7F6 /* InstagramShareComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramShareComponent.m; sourceTree = "<group>"; };
+		8A3EEA72205A24380068A7F6 /* TwitterShareComponet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwitterShareComponet.h; sourceTree = "<group>"; };
+		8A3EEA73205A24380068A7F6 /* TwitterShareComponet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterShareComponet.m; sourceTree = "<group>"; };
 		A0C4ED6C1EDECD6A00E3C45C /* QYShareSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYShareSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C4ED701EDECD6A00E3C45C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0C4ED721EDECD6A00E3C45C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +165,12 @@
 				8A348EAC2057DA0000730BB8 /* SinaWBShareComponent.m */,
 				8A353D1A20591FD2007CF2B5 /* FaceBookShareComponent.h */,
 				8A353D1B20591FD2007CF2B5 /* FaceBookShareComponent.m */,
+				8A3EEA6C205A1BB60068A7F6 /* MessengerShareComponent.h */,
+				8A3EEA6D205A1BB60068A7F6 /* MessengerShareComponent.m */,
+				8A3EEA6F205A21D50068A7F6 /* InstagramShareComponent.h */,
+				8A3EEA70205A21D50068A7F6 /* InstagramShareComponent.m */,
+				8A3EEA72205A24380068A7F6 /* TwitterShareComponet.h */,
+				8A3EEA73205A24380068A7F6 /* TwitterShareComponet.m */,
 			);
 			path = QYComponent;
 			sourceTree = "<group>";
@@ -344,12 +359,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */,
+				8A3EEA6E205A1BB60068A7F6 /* MessengerShareComponent.m in Sources */,
+				8A3EEA74205A24380068A7F6 /* TwitterShareComponet.m in Sources */,
 				8A353D192058EFFE007CF2B5 /* QYShareTool.m in Sources */,
 				8A348EA72057D56D00730BB8 /* QQShareComponent.m in Sources */,
 				A0C4ED741EDECD6A00E3C45C /* AppDelegate.m in Sources */,
 				8A348EAD2057DA0000730BB8 /* SinaWBShareComponent.m in Sources */,
 				8A353D1C20591FD2007CF2B5 /* FaceBookShareComponent.m in Sources */,
 				A0C4ED711EDECD6A00E3C45C /* main.m in Sources */,
+				8A3EEA71205A21D50068A7F6 /* InstagramShareComponent.m in Sources */,
 				8A348E9E2057BDFE00730BB8 /* QYShareSever.m in Sources */,
 				8A348EA12057CB0A00730BB8 /* QYShareRooter.m in Sources */,
 				8A348EAA2057D9E500730BB8 /* WXShareComponent.m in Sources */,
@@ -419,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -462,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,6 +503,7 @@
 					"$(PROJECT_DIR)/QYShareSDK/Lib/QQShareSDK_V3.1.0",
 				);
 				INFOPLIST_FILE = QYShareSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,6 +533,7 @@
 					"$(PROJECT_DIR)/QYShareSDK/Lib/QQShareSDK_V3.1.0",
 				);
 				INFOPLIST_FILE = QYShareSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

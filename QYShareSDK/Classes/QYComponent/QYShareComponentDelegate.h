@@ -11,7 +11,7 @@
 /**
  组件基协议，1.0会把所有的协议暂时放在基协议中。后期再进行拆分
  */
-@protocol QYShareComponentBaseDelegate<NSObject>
+@protocol QYShareComponentDelegate<NSObject>
 
 /**
  注册 第三方sdk 没有 screentKey 传nil。不需要注册的 该方法实现为空方法
@@ -60,6 +60,15 @@
  */
 - (BOOL)hasAuthorized;
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation;
+
+
+
 /**
  发起授权
  */
@@ -70,14 +79,14 @@
 @property(nonatomic,weak)id<QYShareDelegate>delegate;
 @end
 
-@protocol QYShareToQQDelegate<QYShareComponentBaseDelegate>
+@protocol QYShareToQQDelegate<QYShareComponentDelegate>
 
 @end
 
-@protocol QYShareToWXDelegate<QYShareComponentBaseDelegate>
+@protocol QYShareToWXDelegate<QYShareComponentDelegate>
 
 @end
 
-@protocol QYShareToSinaDelegate<QYShareComponentBaseDelegate>
+@protocol QYShareToSinaDelegate<QYShareComponentDelegate>
 
 @end

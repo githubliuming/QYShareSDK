@@ -8,6 +8,8 @@
 
 #import "QYShareTool.h"
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 @implementation QYShareTool
 
 +(NSData *)scaleThumbImageData:(UIImage *)myimage
@@ -53,5 +55,70 @@
 {
     NSURL *url = [NSURL URLWithString:urlShemes];
     return [[UIApplication sharedApplication] openURL:url];
+}
+
++ (UIViewController *)nx_currentViewController
+{
+    // Find best view controller
+    UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    return [self nx_findBestViewController:viewController];
+}
+
++ (UIViewController *)nx_findBestViewController:(UIViewController *)vc
+{
+    if (vc.presentedViewController)
+    {
+        // Return presented view controller
+        return [self nx_findBestViewController:vc.presentedViewController];
+    }
+    else if ([vc isKindOfClass:[UISplitViewController class]])
+    {
+        // Return right hand side
+        UISplitViewController *svc = (UISplitViewController *)vc;
+        if (svc.viewControllers.count > 0)
+            return [self nx_findBestViewController:svc.viewControllers.lastObject];
+        else
+            return vc;
+    }
+    else if ([vc isKindOfClass:[UINavigationController class]])
+    {
+        // Return top view
+        UINavigationController *svc = (UINavigationController *)vc;
+        if (svc.viewControllers.count > 0)
+            return [self nx_findBestViewController:svc.topViewController];
+        else
+            return vc;
+    }
+    else if ([vc isKindOfClass:[UITabBarController class]])
+    {
+        // Return visible view
+        UITabBarController *svc = (UITabBarController *)vc;
+        if (svc.viewControllers.count > 0)
+            return [self nx_findBestViewController:svc.selectedViewController];
+        else
+            return vc;
+    }
+    else
+    {
+        // Unknown view controller type, return last child view controller
+        return vc;
+    }
+}
+
++ (void)requestSocialAccountAuthor:(NSString *)accountTypeIndentifier complent:(void(^)(BOOL granted, NSError *error)) block
+{
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    
+    ACAccountType *sinaWeiboAccount = [accountStore accountTypeWithAccountTypeIdentifier:accountTypeIndentifier];
+    
+    [accountStore requestAccessToAccountsWithType:sinaWeiboAccount
+                                          options:nil
+                                       completion:^(BOOL granted, NSError *error) {
+                                           
+                                           if (block)
+                                           {
+                                               block(granted,error);
+                                           }
+                                       }];
 }
 @end

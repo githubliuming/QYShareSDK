@@ -246,6 +246,20 @@
 {
     return [TencentOAuth iphoneQQInstalled];
 }
+#pragma mark -
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [TencentOAuth HandleOpenURL:url];
+}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
+    BOOL  handled = [TencentOAuth HandleOpenURL:url];
+    if (!handled)
+    {
+        handled = [QQApiInterface handleOpenURL:url delegate:self];
+    }
+    return handled;
+}
 #pragma mark - 授权模块
 
 /**
@@ -293,7 +307,37 @@
  */
 - (void)onResp:(QQBaseResp *)resp
 {
-    
+    if ([resp isMemberOfClass:[SendMessageToQQReq class]])
+    {
+        NSLog(@"------- 匹配成功了 ---------");
+    }
+    // -4 分享取消  0 分享成功
+    if (self.delegate)
+    {
+        if (resp.result.integerValue == 0)
+        {
+            if ([self.delegate respondsToSelector:@selector(publishFinishedWith:)])
+            {
+                [self.delegate publishFinishedWith:self.platform];
+            }
+        }
+        else if (resp.result.integerValue == -4)
+        {
+            if ([self.delegate respondsToSelector:@selector(publishCanceldedWith:)])
+            {
+                [self.delegate publishCanceldedWith:self.platform];
+            }
+        }
+        else
+        {
+            if ([self.delegate respondsToSelector:@selector(publishFailedWith:errorString:)])
+            {
+                [self.delegate publishFailedWith:self.platform errorString:resp.errorDescription];
+            }
+        }
+    }
+    NSLog(@"class -- %@", NSStringFromClass([resp class]));
+    NSLog(@"qq 返回结果 %@", resp.result);
 }
 
 /**

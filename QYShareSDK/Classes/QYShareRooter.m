@@ -8,10 +8,14 @@
 
 #import "QYShareRooter.h"
 
+// 这一块还有优化空间 在rooter层不引用各个组件
 #import "QQShareComponent.h"
 #import "WXShareComponent.h"
 #import "SinaWBShareComponent.h"
-
+#import "FaceBookShareComponent.h"
+#import "MessengerShareComponent.h"
+#import "TwitterShareComponet.h"
+#import "InstagramShareComponent.h"
 static QYShareRooter * static_rooter = nil;
 @interface QYShareRooter()
 @property(nonatomic,strong)NSMutableDictionary * rooterMap;
@@ -27,6 +31,14 @@ static QYShareRooter * static_rooter = nil;
         }
     });
     return static_rooter;
+}
+- (instancetype) init{
+    self = [super init];
+    if (self)
+    {
+        [self registerDefualtComponent];
+    }
+    return self;
 }
 - (void)setDelegate:(id<QYShareDelegate>)delegate
 {
@@ -46,6 +58,18 @@ static QYShareRooter * static_rooter = nil;
     id<QYShareToSinaDelegate> sina = [[SinaWBShareComponent alloc] init];
     [self addComponent:sina forPlatform:QYSharePlatform_SinaWB];
     
+    id<QYShareComponentDelegate> fb = [[FaceBookShareComponent alloc] init];
+    [self addComponent:fb forPlatform:QYSharePlatform_FaceBook];
+    
+    id<QYShareComponentDelegate>messager = [[MessengerShareComponent alloc] init];
+    [self addComponent:messager forPlatform:QYSharePlatform_Messenger];
+    
+    id<QYShareComponentDelegate> tw = [[TwitterShareComponet alloc] init];
+    [self addComponent:tw forPlatform:QYSharePlatform_Twitter];
+    
+    id<QYShareComponentDelegate>ins = [[InstagramShareComponent alloc] init];
+    [self addComponent:ins forPlatform:QYSharePlatform_Ins];
+    
     [self qy_configDelegate];
     
 }
@@ -53,11 +77,11 @@ static QYShareRooter * static_rooter = nil;
 {
     [self.rooterMap enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop)
      {
-         ((id<QYShareComponentBaseDelegate>) obj).delegate = self.delegate;
+         ((id<QYShareComponentDelegate>) obj).delegate = self.delegate;
      }];
 }
 
--(void)addComponent:(id<QYShareComponentBaseDelegate>)interface
+-(void)addComponent:(id<QYShareComponentDelegate>)interface
         forPlatform:(QYSharePlatform)platform
 {
     NSAssert(interface!=nil, @" 分享组件对象为空");
@@ -68,7 +92,7 @@ static QYShareRooter * static_rooter = nil;
 {
     [self.rooterMap removeObjectForKey:@(platform)];
 }
-- (id<QYShareComponentBaseDelegate>)getShareInterfaceWithPlatform:(QYSharePlatform) platform
+- (id<QYShareComponentDelegate>)getShareInterfaceWithPlatform:(QYSharePlatform) platform
 {
     return self.rooterMap[@(platform)];
 }

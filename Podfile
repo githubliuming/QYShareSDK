@@ -15,4 +15,5 @@ target 'QYShareSDK' do
    pod 'TencentOpenAPI-Unofficial', '~> 3.3.0'
 #facebook
    pod 'Facebook-iOS-SDK', '~> 4.1.0'
+   pod 'FBSDKMessengerShareKit', '~> 1.3.2'
 end

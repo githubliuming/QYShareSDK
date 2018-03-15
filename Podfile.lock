@@ -21,12 +21,14 @@ PODS:
   - Facebook-iOS-SDK/ShareKit (4.1.0):
     - Bolts (~> 1.1)
     - Facebook-iOS-SDK/CoreKit
+  - FBSDKMessengerShareKit (1.3.2)
   - TencentOpenAPI-Unofficial (3.3.0)
   - WechatOpenSDK (1.8.0)
   - Weibo_SDK (3.2.3)
 
 DEPENDENCIES:
   - Facebook-iOS-SDK (~> 4.1.0)
+  - FBSDKMessengerShareKit (~> 1.3.2)
   - TencentOpenAPI-Unofficial (~> 3.3.0)
   - WechatOpenSDK (= 1.8.0)
   - Weibo_SDK (= 3.2.3)
@@ -34,10 +36,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Facebook-iOS-SDK: f42dfb27283bf5f05e3a9edc88459a75b9892d99
+  FBSDKMessengerShareKit: 41c0b1a667d685c9433f993eb9611b3d5074e1cb
   TencentOpenAPI-Unofficial: 5c252c123b2557464d271ec1f94dbbc7545c26ee
   WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
   Weibo_SDK: 652ca78c2f7147a5de5e75e7cbea89838a81772a
 
-PODFILE CHECKSUM: 42da7e045011b55e05923c1fbbde81c67805a0f4
+PODFILE CHECKSUM: 201578f66af84346dbaae8e5df823885eac81240
 
 COCOAPODS: 1.4.0

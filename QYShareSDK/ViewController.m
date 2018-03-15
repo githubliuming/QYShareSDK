@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "QYShareSever.h"
 @interface ViewController ()
 
 @end

@@ -33,7 +33,7 @@
          shareType:(QYShareType)type
 {
     //从rooter层获取分享组件对象 然后分享
-    id<QYShareComponentBaseDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
+    id<QYShareComponentDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
     if (interface)
     {
         interface.platform = platform;
@@ -46,11 +46,12 @@
     }
 }
 
-- (void)qy_shareWithInterface:(id<QYShareComponentBaseDelegate>)interface
+- (void)qy_shareWithInterface:(id<QYShareComponentDelegate>)interface
                andShareConfig:(id<QYShareConfig>)shareConfig
                     shareType:(QYShareType)type
 {
     NSLog(@"share type = %ld",type);
+    [QYShareRooter shareInstanced].currentComponent = interface;
     switch (type) {
         case QYShareTypeGif:
             [interface shareGif:shareConfig];
@@ -76,7 +77,7 @@
 {
     [[QYShareRooter shareInstanced] registerDefualtComponent];
 }
-+(void)addComponent:(id<QYShareComponentBaseDelegate>)interface
++(void)addComponent:(id<QYShareComponentDelegate>)interface
         forPlatform:(QYSharePlatform)platform
 {
     [[QYShareRooter shareInstanced] addComponent:interface forPlatform:platform];;
@@ -85,6 +86,23 @@
 {
     [[QYShareRooter shareInstanced]removeComonetWitPlatform:platform];
 }
+
++ (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    
+   return  [[QYShareRooter shareInstanced].currentComponent application:application handleOpenURL:url];
+}
+
++ (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [[QYShareRooter shareInstanced].currentComponent application:application
+                                                                openURL:url
+                                                      sourceApplication:sourceApplication
+                                                             annotation:annotation];
+}
+
 - (void)dealloc
 {
     self.delegate = nil;

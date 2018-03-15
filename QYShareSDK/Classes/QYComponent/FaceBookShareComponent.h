@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "QYShareComponentDelegate.h"
 
-@interface FaceBookShareComponent : NSObject<QYShareComponentBaseDelegate>
+@interface FaceBookShareComponent : NSObject<QYShareComponentDelegate>
 
 @end

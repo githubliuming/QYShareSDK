@@ -14,7 +14,7 @@
 #define ACCESSTOKEN @"ACCESSTOKEN"
 #define SHAREMESSAGEWEBPAGEURL @"http://www.yoyoim.com"
 
-@interface SinaWBShareComponent()<WBHttpRequestDelegate>
+@interface SinaWBShareComponent()<WBHttpRequestDelegate,WeiboSDKDelegate>
 @property(nonatomic,strong)NSString * redirectUrl;
 @end
 @implementation SinaWBShareComponent
@@ -182,6 +182,7 @@
 
 
 #pragma mark sina delegate
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request{}
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
     if ([response isKindOfClass:WBAuthorizeResponse.class])
@@ -313,5 +314,14 @@
          delegate:self
          withTag:@"1"];
     }
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [self application:application handleOpenURL:url];
 }
 @end

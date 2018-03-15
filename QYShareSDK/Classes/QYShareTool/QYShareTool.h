@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class UIImage;
+@class UIImage,UIViewController;
 @interface QYShareTool : NSObject
 
 /**
@@ -34,4 +34,13 @@
  @return 打开结果
  */
 + (BOOL)openUrlShemes:(NSString *)urlShemes;
+
+/**
+ 获取当前视图控制器
+
+ @return 正在显示的视图控制器
+ */
++ (UIViewController *)nx_currentViewController;
+
++ (void)requestSocialAccountAuthor:(NSString *)accountTypeIndentifier complent:(void(^)(BOOL granted, NSError *error)) block;
 @end
