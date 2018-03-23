@@ -21,8 +21,10 @@
 @synthesize shareType,delegate,platform;
 
 - (void)registerInterfaceWithAPPID:(NSString *)appId
-                        secretKey:(NSString *)secretKey
-                        redirectUrl:(NSString *)redirectUrl
+                         secretKey:(NSString *)secretKey
+                       redirectUrl:(NSString *)redirectUrl
+                       application:(UIApplication *)application
+                     launchOptions:(NSDictionary*)launchOptions
 {
     self.appId = appId;
     self.secretKey = secretKey;
@@ -73,9 +75,9 @@
 - (WXMediaMessage *)buildWXMessage:(id)ext with:(id<QYShareConfig>)config
 {
     WXMediaMessage *message = [WXMediaMessage message];
-    message.title = [config getShareTitile];
-    message.description = [config getShareContent];
-    UIImage * image = [config getShareImage];
+    message.title = config.title;
+    message.description = config.content;
+    UIImage * image = [config.images firstObject];;
     NSData * data = [QYShareTool scaleThumbImageData:image];
     if (data.length > 0)
     {
@@ -90,7 +92,7 @@
     if (config) {
         
         ext = [[WXTextObject alloc] init];
-        ext.contentText = [config getShareContent];
+        ext.contentText = config.content;
     }
     return ext;
 }
@@ -100,7 +102,7 @@
     if (config)
     {
         ext = [WXVideoObject object];
-        ext.videoUrl = [config getShareUrl];
+        ext.videoUrl = config.url;
     }
     return ext;
 }
@@ -109,7 +111,7 @@
     WXImageObject * ext;
     if (config)
     {
-        ext.imageData = UIImagePNGRepresentation([config getShareImage]);
+        ext.imageData = UIImagePNGRepresentation([config.images firstObject]);
     }
     return ext;
 }
@@ -118,7 +120,7 @@
     WXWebpageObject * ext;
     if (config)
     {
-        ext.webpageUrl = [config getShareUrl];
+        ext.webpageUrl = config.url;
     }
     return ext;
 }
@@ -127,7 +129,7 @@
     WXEmoticonObject * ext;
     if (config)
     {
-        ext.emoticonData = [NSData dataWithContentsOfFile:[config getGifPath]];
+        ext.emoticonData = [NSData dataWithContentsOfFile:config.gifPath];
     }
     return ext;
 }

@@ -22,6 +22,14 @@
 - (void)startShare:(id<QYShareConfig>)shareConfig
       platformType:(QYSharePlatform)platform
          shareType:(QYShareType)type;
+
+-(void)startShare:(NSString *)title
+          content:(NSString *)content
+           images:(NSArray *)images
+              url:(NSString *)url
+          gifPath:(NSString *)gifPath
+     platformType:(QYSharePlatform)platform
+        shareType:(QYShareType)type;
 /**
  向路由表中注册新的组件
  @param interface 组件对象
@@ -35,6 +43,8 @@
  @param platform 平台
  */
 + (void)removeComponetWithPlatfrom:(QYSharePlatform)platform;
+
++(void)registerThirdComponent:(void(^)(id<QYShareComponentDelegate> component,QYSharePlatform platform))block;
 
 + (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
 

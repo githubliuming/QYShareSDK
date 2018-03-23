@@ -21,7 +21,9 @@
  */
 - (void)registerInterfaceWithAPPID:(NSString *)appId
                         secretKey:(NSString *)secretKey
-                       redirectUrl:(NSString *)redirectUrl;
+                       redirectUrl:(NSString *)redirectUrl
+                       application:(UIApplication *)application
+                     launchOptions:(NSDictionary*)launchOptions;
 
 
 /**

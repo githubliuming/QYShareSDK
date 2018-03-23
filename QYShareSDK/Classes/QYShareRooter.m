@@ -85,6 +85,7 @@ static QYShareRooter * static_rooter = nil;
         forPlatform:(QYSharePlatform)platform
 {
     NSAssert(interface!=nil, @" 分享组件对象为空");
+    interface.platform = platform;
     [self.rooterMap setObject:interface forKey:@(platform)];
 }
 
@@ -104,4 +105,17 @@ static QYShareRooter * static_rooter = nil;
     }
     return _rooterMap;
 }
+- (NSSet<id<QYShareComponentDelegate>> *)getAllRegisterComponet
+{
+    NSMutableSet * set = [[NSMutableSet alloc] init];
+    [[self.rooterMap allValues] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
+    {
+        [set addObject:obj];
+    }];
+    return set;
+}
+@end
+@implementation QYShareConfigModel
+
+@synthesize url,content,title,images,gifPath;
 @end

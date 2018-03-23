@@ -13,6 +13,16 @@
 @implementation TwitterShareComponet
 @synthesize shareType,platform,delegate;
 
+
+- (void)registerInterfaceWithAPPID:(NSString *)appId
+                         secretKey:(NSString *)secretKey
+                       redirectUrl:(NSString *)redirectUrl
+                       application:(UIApplication *)application
+                     launchOptions:(NSDictionary*)launchOptions
+{
+    
+}
+
 - (void)authoried
 {
     if (![self hasAuthorized])
@@ -30,13 +40,6 @@
 - (BOOL)isInstallAPPClient
 {
     return [QYShareTool canOpenUrlShemes:@"twitter://"];
-}
-
-- (void)registerInterfaceWithAPPID:(NSString *)appId
-                         secretKey:(NSString *)secretKey
-                       redirectUrl:(NSString *)redirectUrl
-{
-    
 }
 
 - (void)shareGif:(id<QYShareConfig>)interface
@@ -66,7 +69,10 @@
 
 - (void)shareToTwitterWithIntnerface:(id<QYShareConfig>)config
 {
-    [self shareToTwitter:[config getShareTitile] image:[config getShareImage] url:[config getShareUrl] completion:^(NSInteger result) {
+    [self shareToTwitter:config.title
+                   image:[config.images firstObject]
+                     url:config.url
+              completion:^(NSInteger result) {
         
         [self qy_handlerResutl:result errorMsg:nil];
     }];
@@ -200,9 +206,6 @@
         
     }];
 }
-
-
-
 - (void)qy_handlerResutl:(NSInteger)result errorMsg:(NSString *)string
 {
     if (self.delegate)

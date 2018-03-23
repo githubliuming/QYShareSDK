@@ -36,7 +36,6 @@
     id<QYShareComponentDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
     if (interface)
     {
-        interface.platform = platform;
         interface.shareType = type;
         [self qy_shareWithInterface:interface andShareConfig:shareConfig shareType:type];
     }
@@ -45,12 +44,28 @@
         NSLog(@"该平台未注册 分享组件");
     }
 }
+-(void)startShare:(NSString *)title
+          content:(NSString *)content
+           images:(NSArray *)images
+              url:(NSString *)url
+          gifPath:(NSString *)gifPath
+     platformType:(QYSharePlatform)platform
+        shareType:(QYShareType)type
+{
+    id<QYShareConfig> configModel = [[QYShareConfigModel alloc] init];
+    configModel.title  = title;
+    configModel.content = content;
+    configModel.images = images;
+    configModel.url = url;
+    configModel.gifPath  = gifPath;
+    [self startShare:configModel platformType:platform shareType:type];
+}
 
 - (void)qy_shareWithInterface:(id<QYShareComponentDelegate>)interface
                andShareConfig:(id<QYShareConfig>)shareConfig
                     shareType:(QYShareType)type
 {
-    NSLog(@"share type = %ld",type);
+    NSLog(@"share type = %ld",(long)type);
     [QYShareRooter shareInstanced].currentComponent = interface;
     switch (type) {
         case QYShareTypeGif:
@@ -69,7 +84,7 @@
              [interface shareVideo:shareConfig];
             break;
         default:
-            NSLog(@"未知分享类型 %ld",type);
+            NSLog(@"未知分享类型 %ld",(long)type);
             break;
     }
 }
@@ -101,6 +116,19 @@
                                                                 openURL:url
                                                       sourceApplication:sourceApplication
                                                              annotation:annotation];
+}
+
++(void)registerThirdComponent:(void(^)(id<QYShareComponentDelegate> component,QYSharePlatform platform))block
+{
+    if (block)
+    {
+        NSSet <id<QYShareComponentDelegate>> * components = [[QYShareRooter shareInstanced] getAllRegisterComponet];
+        [components enumerateObjectsUsingBlock:^(id<QYShareComponentDelegate>  _Nonnull obj, BOOL * _Nonnull stop)
+        {
+            block(obj,obj.platform);
+        }];
+        
+    }
 }
 
 - (void)dealloc

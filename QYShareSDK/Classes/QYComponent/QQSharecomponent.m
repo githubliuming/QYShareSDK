@@ -25,8 +25,10 @@
 @synthesize shareType,delegate,platform;
 
 - (void)registerInterfaceWithAPPID:(NSString *)appId
-                        secretKey:(NSString *)secretKey
+                         secretKey:(NSString *)secretKey
                        redirectUrl:(NSString *)redirectUrl
+                       application:(UIApplication *)application
+                     launchOptions:(NSDictionary*)launchOptions
 {
     self.tencentOAuth = [[TencentOAuth alloc] initWithAppId:appId andDelegate:self];
 }
@@ -78,7 +80,7 @@
     QQApiTextObject * textObject;
     if(config)
     {
-        textObject = [[QQApiTextObject alloc] initWithText:[config getShareContent]];
+        textObject = [[QQApiTextObject alloc] initWithText:config.content];
     }
     return textObject;
 }
@@ -87,10 +89,10 @@
     QQApiVideoObject * videoObj;
     if(config)
     {
-        videoObj = [QQApiVideoObject objectWithURL:[NSURL URLWithString:[config getShareUrl]]
-                                             title:[config getShareTitile]
-                                       description:[config getShareContent]
-                                   previewImageURL:[NSURL URLWithString:[config getImageUrl]]];
+        videoObj = [QQApiVideoObject objectWithURL:[NSURL URLWithString:config.url]
+                                             title:config.title
+                                       description:config.content
+                                   previewImageData:UIImagePNGRepresentation([config.images firstObject]) ];
     }
     return videoObj;
 }
@@ -99,10 +101,10 @@
     QQApiNewsObject * newsObj;
     if(config)
     {
-        newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:[config getShareUrl]]
-                                           title:[config getShareTitile]
-                                     description:[config getShareContent]
-                                previewImageData:[config getShareImageData]];
+        newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:config.url]
+                                           title:config.title
+                                     description:config.content
+                                previewImageData:UIImagePNGRepresentation([config.images firstObject])];
     }
     return newsObj;
 }
@@ -111,17 +113,17 @@
     QQApiImageObject * imageObject;
     if(config)
     {
-        UIImage *image = [config getShareImage];
+        UIImage *image = [config.images firstObject];;
         NSData * preImageData = [self getPreImageWithImage:image];
         NSData *imageData = UIImageJPEGRepresentation(image, 0.6);
         if(self.shareType == QYShareTypeGif)
         {
-            imageData = [NSData dataWithContentsOfFile:[config getGifPath]];
+            imageData = [NSData dataWithContentsOfFile:config.gifPath];
         }
         imageObject = [QQApiImageObject objectWithData:imageData
                                       previewImageData:preImageData
-                                                 title:[config getShareTitile]
-                                           description:[config getShareContent]
+                                                 title:config.title
+                                           description:config.content
                                         imageDataArray:nil];
     }
     return imageObject;
@@ -131,14 +133,14 @@
     QQApiImageArrayForQZoneObject * zoneObject;
     if (config)
     {
-        UIImage * image = [config getShareImage];
+        UIImage * image = [config.images firstObject];
         NSData * imageData = UIImagePNGRepresentation(image);
         if(self.shareType == QYShareTypeGif)
         {
-            imageData = [NSData dataWithContentsOfFile:[config getGifPath]];
+            imageData = [NSData dataWithContentsOfFile:config.gifPath];
         }
         zoneObject = [QQApiImageArrayForQZoneObject objectWithimageDataArray:@[imageData]
-                                                                       title:[config getShareTitile]
+                                                                       title:config.title
                                                                       extMap:nil];
         zoneObject.shareDestType = ShareDestTypeQQ;
     }

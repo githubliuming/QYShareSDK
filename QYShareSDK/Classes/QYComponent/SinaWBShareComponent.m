@@ -20,8 +20,10 @@
 @implementation SinaWBShareComponent
 @synthesize platform,delegate,shareType;
 - (void)registerInterfaceWithAPPID:(NSString *)appId
-                        secretKey:(NSString *)secretKey
-                        redirectUrl:(NSString *)redirectUrl
+                         secretKey:(NSString *)secretKey
+                       redirectUrl:(NSString *)redirectUrl
+                       application:(UIApplication *)application
+                     launchOptions:(NSDictionary*)launchOptions
 {
     self.redirectUrl = redirectUrl;
     /*
@@ -47,8 +49,8 @@
 - (void)shareGif:(id<QYShareConfig>)interface
 {
     //    注意 shareTitle的格式:安全域名 + 分享文案 (内容不超过140个汉字，文本中不能包含“#话题词#”，同时文本中必须包含至少一个第三方分享到微博的网页URL，且该URL只能是该第三方（调用方）绑定域下的URL链接)  还有一定要进行URLencode
-    NSString * title = [interface getShareTitile];
-    NSData * gifData = [NSData dataWithContentsOfFile:[interface getGifPath]];
+    NSString * title = interface.title;
+    NSData * gifData = [NSData dataWithContentsOfFile:interface.gifPath];
     NSDictionary *sinaDic = [[NSUserDefaults standardUserDefaults] objectForKey:SINAWEIBO_TOKEN_DIC];
     NSString * shareTitle_ = [NSString stringWithFormat:@"http://www.philm.cc %@",title];
     shareTitle_ = [shareTitle_ stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -97,18 +99,18 @@
     if (config)
     {
         imageObject = [[WBImageObject alloc] init];
-        imageObject.imageData = UIImagePNGRepresentation([config getShareImage]);
+        imageObject.imageData = UIImagePNGRepresentation([config.images firstObject]);
     }
     return imageObject;
 }
 - (WBMessageObject *)buildMessage:(id<QYShareConfig>)config
 {
-    NSString * title = [config getShareTitile];
+    NSString * title = config.title;
     if (title.length == 0)
     {
-        title = [config getShareContent];
+        title = config.content;
     }
-    NSString * url = [config getShareUrl];
+    NSString * url = config.url;
     NSString *shareTextStr;
     NSRange range = [title rangeOfString:@"http://"];
     if (range.location == NSNotFound)

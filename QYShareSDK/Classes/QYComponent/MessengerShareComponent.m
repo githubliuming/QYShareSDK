@@ -11,7 +11,7 @@
 #import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
 
-@interface MessengerShareComponent()<FBSDKSharingDelegate>
+@interface MessengerShareComponent()<FBSDKSharingDelegate,FBSDKMessengerURLHandlerDelegate>
 @property(nonatomic,strong) FBSDKMessengerURLHandler * messengerUrlHandler;
 @end
 @implementation MessengerShareComponent
@@ -20,7 +20,10 @@
 
 - (void)registerInterfaceWithAPPID:(NSString *)appId
                          secretKey:(NSString *)secretKey
-                       redirectUrl:(NSString *)redirectUrl {
+                       redirectUrl:(NSString *)redirectUrl
+                       application:(UIApplication *)application
+                     launchOptions:(NSDictionary*)launchOptions
+{
     
     _messengerUrlHandler = [[FBSDKMessengerURLHandler alloc] init];
     _messengerUrlHandler.delegate = self;
@@ -30,7 +33,7 @@
 
 - (void)shareGif:(id<QYShareConfig>)interface
 {
-    NSData * gifData = [NSData dataWithContentsOfFile:[interface getShareUrl]];
+    NSData * gifData = [NSData dataWithContentsOfFile:interface.gifPath];
     [FBSDKMessengerSharer shareAnimatedGIF:gifData withOptions:nil];
     NSLog(@"Messenger 不支持分享Gif");
 }
@@ -40,11 +43,13 @@
     BOOL _is_ipad = [[UIDevice currentDevice].model hasPrefix:@"iPad"];
     if (_is_ipad)
     {
-        UIImage *image = [interface getShareImage];
+        UIImage *image = [interface.images firstObject];
         [FBSDKMessengerSharer shareImage:image withOptions:nil];
-    } else {
+    }
+    else
+    {
         
-        FBSDKSharePhotoContent *content = [self FBBuildPhotosContent:@[[interface getShareImage]]];
+        FBSDKSharePhotoContent *content = [self FBBuildPhotosContent:interface.images];
         [self shareToMessger:content];
     }
 }
@@ -56,14 +61,14 @@
 
 - (void)shareUrl:(id<QYShareConfig>)interface
 {
-    FBSDKShareLinkContent * linkContent = [self fbBuildLinkContent:[interface getShareUrl]
-                                                     contentString:[interface getShareContent]];
+    FBSDKShareLinkContent * linkContent = [self fbBuildLinkContent:interface.url
+                                                     contentString:interface.content];
     [self shareToMessger:linkContent];
 }
 
 - (void)shareVideo:(id<QYShareConfig>)interface
 {
-    NSData *videoData = [NSData dataWithContentsOfFile:[interface getShareUrl]];
+    NSData *videoData = [NSData dataWithContentsOfFile:interface.url];
     [FBSDKMessengerSharer shareVideo:videoData withOptions:nil];
 }
 - (void)authoried {

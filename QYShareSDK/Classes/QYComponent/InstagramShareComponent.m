@@ -14,6 +14,8 @@
 - (void)registerInterfaceWithAPPID:(NSString *)appId
                          secretKey:(NSString *)secretKey
                        redirectUrl:(NSString *)redirectUrl
+                       application:(UIApplication *)application
+                     launchOptions:(NSDictionary*)launchOptions
 {
     
 }
@@ -35,12 +37,12 @@
 
 - (void)shareGif:(id<QYShareConfig>)interface
 {
-    [self shareMediaToInstagramWithAlbumUrl:[NSURL URLWithString:[interface getShareUrl]]];
+    [self shareMediaToInstagramWithAlbumUrl:[NSURL URLWithString:interface.url]];
 }
 
 - (void)shareImage:(id<QYShareConfig>)interface
 {
-    [self shareMediaToInstagramWithAlbumUrl:[NSURL URLWithString:[interface getShareUrl]]];
+    [self shareMediaToInstagramWithAlbumUrl:[NSURL URLWithString:interface.url]];
 }
 
 - (void)shareText:(id<QYShareConfig>)interface
@@ -55,7 +57,7 @@
 
 - (void)shareVideo:(id<QYShareConfig>)interface
 {
-    [self shareMediaToInstagramWithAlbumUrl:[NSURL URLWithString:[interface getShareUrl]]];
+    [self shareMediaToInstagramWithAlbumUrl:[NSURL URLWithString:interface.url]];
 }
 
 - (void)shareMediaToInstagramWithAlbumUrl:(NSURL *)albumUrl

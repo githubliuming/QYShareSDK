@@ -7,15 +7,52 @@
 //
 
 #import "AppDelegate.h"
+#import "QYShareSever.h"
+#define KAPPID  @"KAPPID"
+#define KSecretKey @"KSecretKey"
+#define KRedirectUrl @"KRedirectUrl"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (NSDictionary *)thirdRegisterInfoMap{
+    
+    return @{
+             @(QYSharePlatform_QQ_Friend):@{
+                     KAPPID:@"1105725139",
+                     KSecretKey:@"",
+                    },
+             @(QYSharePlatform_WX_Contact):@{
+                     KAPPID:@"wx3da7473af9c22b08",
+                     KSecretKey:@"14bb143ec7dbea55abbc00d77e1a49c2",
+                     },
+             @(QYSharePlatform_SinaWB):@{
+                     KAPPID:@"1374044879",
+                     KSecretKey:@"3d0a13e13cde20db2393f4a844048956",
+                     KRedirectUrl:@"http://www.baidu.com"
+                     },
+            };
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //注册第三方平台
+    [QYShareSever registerThirdComponent:^(id<QYShareComponentDelegate>component, QYSharePlatform platform)
+     {
+         NSDictionary * configDic = [self thirdRegisterInfoMap][@(platform)];
+         if (configDic)
+         {
+             [component registerInterfaceWithAPPID:configDic[KAPPID]
+                                         secretKey:configDic[KSecretKey]
+                                       redirectUrl:configDic[KRedirectUrl]
+                                       application:application
+                                     launchOptions:launchOptions];
+             
+         }
+    }];
     return YES;
 }
 

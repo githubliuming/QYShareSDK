@@ -25,5 +25,9 @@
 - (void)removeComonetWitPlatform:(QYSharePlatform)platform;
 
 - (id<QYShareComponentDelegate>)getShareInterfaceWithPlatform:(QYSharePlatform) platform;
+- (NSSet<id<QYShareComponentDelegate>> *)getAllRegisterComponet;
+@end
+
+@interface QYShareConfigModel:NSObject<QYShareConfig>
 
 @end

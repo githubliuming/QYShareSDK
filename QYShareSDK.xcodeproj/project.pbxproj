@@ -28,6 +28,8 @@
 		8A3EEA6E205A1BB60068A7F6 /* MessengerShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EEA6D205A1BB60068A7F6 /* MessengerShareComponent.m */; };
 		8A3EEA71205A21D50068A7F6 /* InstagramShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EEA70205A21D50068A7F6 /* InstagramShareComponent.m */; };
 		8A3EEA74205A24380068A7F6 /* TwitterShareComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EEA73205A24380068A7F6 /* TwitterShareComponet.m */; };
+		8A76D1E7205B6D5A00DAFC8F /* MoreShareComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A76D1E6205B6D5A00DAFC8F /* MoreShareComponet.m */; };
+		8A76D1EA205B703300DAFC8F /* SystemShareComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A76D1E9205B703300DAFC8F /* SystemShareComponet.m */; };
 		A0C4ED711EDECD6A00E3C45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED701EDECD6A00E3C45C /* main.m */; };
 		A0C4ED741EDECD6A00E3C45C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED731EDECD6A00E3C45C /* AppDelegate.m */; };
 		A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4ED761EDECD6A00E3C45C /* ViewController.m */; };
@@ -74,6 +76,10 @@
 		8A3EEA70205A21D50068A7F6 /* InstagramShareComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramShareComponent.m; sourceTree = "<group>"; };
 		8A3EEA72205A24380068A7F6 /* TwitterShareComponet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwitterShareComponet.h; sourceTree = "<group>"; };
 		8A3EEA73205A24380068A7F6 /* TwitterShareComponet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterShareComponet.m; sourceTree = "<group>"; };
+		8A76D1E5205B6D5A00DAFC8F /* MoreShareComponet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreShareComponet.h; sourceTree = "<group>"; };
+		8A76D1E6205B6D5A00DAFC8F /* MoreShareComponet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreShareComponet.m; sourceTree = "<group>"; };
+		8A76D1E8205B703300DAFC8F /* SystemShareComponet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemShareComponet.h; sourceTree = "<group>"; };
+		8A76D1E9205B703300DAFC8F /* SystemShareComponet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemShareComponet.m; sourceTree = "<group>"; };
 		A0C4ED6C1EDECD6A00E3C45C /* QYShareSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYShareSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C4ED701EDECD6A00E3C45C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0C4ED721EDECD6A00E3C45C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +177,10 @@
 				8A3EEA70205A21D50068A7F6 /* InstagramShareComponent.m */,
 				8A3EEA72205A24380068A7F6 /* TwitterShareComponet.h */,
 				8A3EEA73205A24380068A7F6 /* TwitterShareComponet.m */,
+				8A76D1E5205B6D5A00DAFC8F /* MoreShareComponet.h */,
+				8A76D1E6205B6D5A00DAFC8F /* MoreShareComponet.m */,
+				8A76D1E8205B703300DAFC8F /* SystemShareComponet.h */,
+				8A76D1E9205B703300DAFC8F /* SystemShareComponet.m */,
 			);
 			path = QYComponent;
 			sourceTree = "<group>";
@@ -256,13 +266,13 @@
 		A0C4ED641EDECD6A00E3C45C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = burning;
 				TargetAttributes = {
 					A0C4ED6B1EDECD6A00E3C45C = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = WJYBVW342N;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = FJV2B9GPDW;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -358,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A76D1EA205B703300DAFC8F /* SystemShareComponet.m in Sources */,
 				A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */,
 				8A3EEA6E205A1BB60068A7F6 /* MessengerShareComponent.m in Sources */,
 				8A3EEA74205A24380068A7F6 /* TwitterShareComponet.m in Sources */,
@@ -367,6 +378,7 @@
 				8A348EAD2057DA0000730BB8 /* SinaWBShareComponent.m in Sources */,
 				8A353D1C20591FD2007CF2B5 /* FaceBookShareComponent.m in Sources */,
 				A0C4ED711EDECD6A00E3C45C /* main.m in Sources */,
+				8A76D1E7205B6D5A00DAFC8F /* MoreShareComponet.m in Sources */,
 				8A3EEA71205A21D50068A7F6 /* InstagramShareComponent.m in Sources */,
 				8A348E9E2057BDFE00730BB8 /* QYShareSever.m in Sources */,
 				8A348EA12057CB0A00730BB8 /* QYShareRooter.m in Sources */,
@@ -406,7 +418,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -414,7 +428,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -455,7 +473,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -463,7 +483,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -493,9 +517,10 @@
 			baseConfigurationReference = F191A3EEF37F254AAA1CF100 /* Pods-QYShareSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WJYBVW342N;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yan wang (7S9KKYDN2S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yan wang (7S9KKYDN2S)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FJV2B9GPDW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QQShareSDK_V3.1.0",
@@ -512,9 +537,10 @@
 					"$(PROJECT_DIR)/QYShareSDK/Lib/libWeiboSDK",
 					"$(PROJECT_DIR)/QYShareSDK/Lib/WXChatSDK_V1.7.4",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.catchapp.cc.QYShareSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoyoshijie.philm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3aeacfd8-cfac-4028-a7e1-75912749ac2d";
+				PROVISIONING_PROFILE_SPECIFIER = com.yoyoshijie.philm.beta;
 			};
 			name = Debug;
 		};
@@ -523,9 +549,10 @@
 			baseConfigurationReference = 57B5CCDCF5527D863D1D66B4 /* Pods-QYShareSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WJYBVW342N;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yan wang (7S9KKYDN2S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yan wang (7S9KKYDN2S)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FJV2B9GPDW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QQShareSDK_V3.1.0",
@@ -542,9 +569,10 @@
 					"$(PROJECT_DIR)/QYShareSDK/Lib/libWeiboSDK",
 					"$(PROJECT_DIR)/QYShareSDK/Lib/WXChatSDK_V1.7.4",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.catchapp.cc.QYShareSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoyoshijie.philm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3aeacfd8-cfac-4028-a7e1-75912749ac2d";
+				PROVISIONING_PROFILE_SPECIFIER = com.yoyoshijie.philm.beta;
 			};
 			name = Release;
 		};

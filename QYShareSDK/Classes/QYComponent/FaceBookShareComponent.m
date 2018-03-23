@@ -19,6 +19,8 @@
 - (void)registerInterfaceWithAPPID:(NSString *)appId
                          secretKey:(NSString *)secretKey
                        redirectUrl:(NSString *)redirectUrl
+                       application:(UIApplication *)application
+                     launchOptions:(NSDictionary*)launchOptions
 {
 }
 
@@ -29,7 +31,7 @@
 
 - (void)shareImage:(id<QYShareConfig>)interface
 {
-    FBSDKSharePhotoContent * photoContent = [self FBBuildPhotosContent:@[[interface getShareImage]]];
+    FBSDKSharePhotoContent * photoContent = [self FBBuildPhotosContent:interface.images];
     [self shareToFB:photoContent];
 }
 
@@ -40,14 +42,14 @@
 
 - (void)shareUrl:(id<QYShareConfig>)interface
 {
-    FBSDKShareLinkContent * linkContent = [self fbBuildLinkContent: [interface getShareUrl]
-                                                     contentString:[interface getShareContent]];
+    FBSDKShareLinkContent * linkContent = [self fbBuildLinkContent:interface.url
+                                                     contentString:interface.content];
     [self shareToFB:linkContent];
 }
 
 - (void)shareVideo:(id<QYShareConfig>)interface
 {
-    FBSDKShareVideoContent *content = [self fbBuildVideoContent:[NSURL URLWithString:[interface getShareUrl]]];
+    FBSDKShareVideoContent *content = [self fbBuildVideoContent:[NSURL URLWithString:interface.url]];
     
 //    content.hashtag = [FBSDKHashtag hashtagWithString:@"#Philm"];
     [self shareToFB:content];
