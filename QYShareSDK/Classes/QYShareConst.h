@@ -44,7 +44,7 @@ typedef NS_ENUM(NSInteger,QYShareType)
 @property(nonatomic,strong)NSString * gifPath;         ///<* 分享gif的本地路径
 @end
 
-@protocol QYShareDelegate<NSObject>
+@protocol QYShareFinishDelegate<NSObject>
 
 @optional
 

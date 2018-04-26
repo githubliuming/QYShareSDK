@@ -40,22 +40,22 @@ static QYShareRooter * static_rooter = nil;
     }
     return self;
 }
-- (void)setDelegate:(id<QYShareDelegate>)delegate
+- (void)setDelegate:(id<QYShareFinishDelegate>)delegate
 {
     _delegate = delegate;
     [self qy_configDelegate];
 }
 - (void)registerDefualtComponent
 {
-    id<QYShareToQQDelegate> qq = [[QQShareComponent alloc] init];
+    id<QYShareComponentDelegate> qq = [[QQShareComponent alloc] init];
     [self addComponent:qq forPlatform:QYSharePlatform_QQ_Zone];
     [self addComponent:qq forPlatform:QYSharePlatform_QQ_Friend];
     
-    id<QYShareToWXDelegate> wx = [[WXShareComponent alloc] init];
+    id<QYShareComponentDelegate> wx = [[WXShareComponent alloc] init];
     [self addComponent:wx forPlatform:QYSharePlatform_WX_TimerLine];
     [self addComponent:wx forPlatform:QYSharePlatform_WX_Contact];
     
-    id<QYShareToSinaDelegate> sina = [[SinaWBShareComponent alloc] init];
+    id<QYShareComponentDelegate> sina = [[SinaWBShareComponent alloc] init];
     [self addComponent:sina forPlatform:QYSharePlatform_SinaWB];
     
     id<QYShareComponentDelegate> fb = [[FaceBookShareComponent alloc] init];
@@ -77,11 +77,11 @@ static QYShareRooter * static_rooter = nil;
 {
     [self.rooterMap enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop)
      {
-         ((id<QYShareComponentDelegate>) obj).delegate = self.delegate;
+         ((id<QYPropertyDelegate>) obj).delegate = self.delegate;
      }];
 }
 
--(void)addComponent:(id<QYShareComponentDelegate>)interface
+-(void)addComponent:(id<QYPropertyDelegate>)interface
         forPlatform:(QYSharePlatform)platform
 {
     NSAssert(interface!=nil, @" 分享组件对象为空");

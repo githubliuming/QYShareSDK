@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "QYShareComponentDelegate.h"
-@interface TwitterShareComponet : NSObject<QYShareComponentDelegate>
+@interface TwitterShareComponet : NSObject<QYShareComponentDelegate,QYShareDelegate,QYPropertyDelegate,QYShareAuthorDelegate,QYShareFinishDelegate>
 
 @end

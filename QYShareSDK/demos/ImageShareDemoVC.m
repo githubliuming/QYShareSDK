@@ -24,7 +24,6 @@
         
         dic = self.dataSource[indexPath.row];
     }
-    
     QYShareModel * shareMdoel  =[[QYShareModel alloc] init];
     shareMdoel.title = @"这是一张图片";
     shareMdoel.content = @"这个图片可以玩一年";

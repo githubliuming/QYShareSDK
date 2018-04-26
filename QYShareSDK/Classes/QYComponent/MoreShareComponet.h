@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "QYShareComponentDelegate.h"
-@interface MoreShareComponet : NSObject<QYShareComponentDelegate>
+@interface MoreShareComponet : NSObject<QYShareComponentDelegate,QYShareDelegate,QYPropertyDelegate,QYShareAuthorDelegate,QYShareFinishDelegate>
 
 @end

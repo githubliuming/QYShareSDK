@@ -13,7 +13,7 @@
 
 + (instancetype)shareInstanced;
 
-@property(nonatomic,weak)id<QYShareDelegate>delegate;
+@property(nonatomic,weak)id<QYShareFinishDelegate>delegate;
 
 @property(nonatomic,weak)id<QYShareComponentDelegate>currentComponent;
 

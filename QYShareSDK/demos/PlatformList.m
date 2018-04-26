@@ -7,7 +7,7 @@
 //
 
 #import "PlatformList.h"
-@interface PlatformList ()<QYShareDelegate>
+@interface PlatformList ()<QYShareFinishDelegate>
 
 @end
 

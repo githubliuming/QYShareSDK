@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 #import "QYShareComponentDelegate.h"
 
-@interface QQShareComponent : NSObject<QYShareToQQDelegate>
+@interface QQShareComponent : NSObject<QYShareComponentDelegate,QYShareDelegate,QYPropertyDelegate,QYShareAuthorDelegate,QYShareFinishDelegate>
 @end

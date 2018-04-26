@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "QYShareComponentDelegate.h"
-@interface SinaWBShareComponent : NSObject<QYShareToSinaDelegate>
+@interface SinaWBShareComponent : NSObject<QYShareComponentDelegate,QYShareDelegate,QYPropertyDelegate,QYShareAuthorDelegate,QYShareFinishDelegate>
 
 @end

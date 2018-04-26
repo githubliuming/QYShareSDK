@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "QYShareComponentDelegate.h"
-@interface InstagramShareComponent : NSObject<QYShareComponentDelegate>
+@interface InstagramShareComponent : NSObject<QYShareComponentDelegate,QYShareDelegate,QYPropertyDelegate,QYShareAuthorDelegate,QYShareFinishDelegate>
 
 @end

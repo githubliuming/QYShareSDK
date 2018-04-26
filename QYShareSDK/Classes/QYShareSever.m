@@ -9,11 +9,11 @@
 #import "QYShareSever.h"
 #import "QYShareRooter.h"
 @interface QYShareSever()
-@property(nonatomic,weak)id<QYShareDelegate>delegate;
+@property(nonatomic,weak)id<QYShareFinishDelegate>delegate;
 @end
 @implementation QYShareSever 
 
-- (instancetype)initWithDelegate:(id<QYShareDelegate>)delegate
+- (instancetype)initWithDelegate:(id<QYShareFinishDelegate>)delegate
 {
     self = [super init];
     if (self)
@@ -33,7 +33,7 @@
          shareType:(QYShareType)type
 {
     //从rooter层获取分享组件对象 然后分享
-    id<QYShareComponentDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
+    id<QYPropertyDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
     if (interface)
     {
         interface.shareType = type;
@@ -61,7 +61,7 @@
     [self startShare:configModel platformType:platform shareType:type];
 }
 
-- (void)qy_shareWithInterface:(id<QYShareComponentDelegate>)interface
+- (void)qy_shareWithInterface:(id<QYShareDelegate>)interface
                andShareConfig:(id<QYShareConfig>)shareConfig
                     shareType:(QYShareType)type
 {
@@ -90,12 +90,12 @@
 }
 -(BOOL)hasAuthor:(QYSharePlatform)platform
 {
-    id<QYShareComponentDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
+    id<QYShareAuthorDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
     return [interface hasAuthorized];
 }
 -(void)authoried:(QYSharePlatform)platform
 {
-    id<QYShareComponentDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
+    id<QYShareAuthorDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
     [QYShareRooter shareInstanced].currentComponent = interface;
     [interface authoried];
 }
@@ -129,12 +129,12 @@
                                                              annotation:annotation];
 }
 
-+(void)registerThirdComponent:(void(^)(id<QYShareComponentDelegate> component,QYSharePlatform platform))block
++(void)registerThirdComponent:(void(^)(id<QYPropertyDelegate> component,QYSharePlatform platform))block
 {
     if (block)
     {
-        NSSet <id<QYShareComponentDelegate>> * components = [[QYShareRooter shareInstanced] getAllRegisterComponet];
-        [components enumerateObjectsUsingBlock:^(id<QYShareComponentDelegate>  _Nonnull obj, BOOL * _Nonnull stop)
+        NSSet <id<QYPropertyDelegate>> * components = [[QYShareRooter shareInstanced] getAllRegisterComponet];
+        [components enumerateObjectsUsingBlock:^(id<QYPropertyDelegate>  _Nonnull obj, BOOL * _Nonnull stop)
         {
             block(obj,obj.platform);
         }];

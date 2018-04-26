@@ -17,7 +17,7 @@
 - (instancetype) init NS_UNAVAILABLE;
 + (instancetype) new NS_UNAVAILABLE; 
 
-- (instancetype)initWithDelegate:(id<QYShareDelegate>)delegate;
+- (instancetype)initWithDelegate:(id<QYShareFinishDelegate>)delegate;
 
 - (void)startShare:(id<QYShareConfig>)shareConfig
       platformType:(QYSharePlatform)platform

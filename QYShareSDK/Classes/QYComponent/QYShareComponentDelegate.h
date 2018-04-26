@@ -20,12 +20,29 @@
  @param redirectUrl 重定向url 不需要的传nil
  */
 - (void)registerInterfaceWithAPPID:(NSString *)appId
-                        secretKey:(NSString *)secretKey
+                         secretKey:(NSString *)secretKey
                        redirectUrl:(NSString *)redirectUrl
                        application:(UIApplication *)application
-                     launchOptions:(NSDictionary*)launchOptions;
+                     launchOptions:(NSDictionary *)launchOptions;
+/**
+ 是否安装第三方APP
+ @return YES 安装了， NO未安装
+ */
+- (BOOL)isInstallAPPClient;
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation;
+@end
+@protocol QYPropertyDelegate<QYShareComponentDelegate>
+@property(nonatomic, assign) QYSharePlatform platform;
+@property(nonatomic, assign) QYShareType shareType;
+@property(nonatomic, weak) id<QYShareFinishDelegate> delegate;
+@end
+@protocol QYShareDelegate<QYShareComponentDelegate>
 /**
  分享图片
  */
@@ -46,49 +63,17 @@
  分享纯文本
  */
 - (void)shareText:(id<QYShareConfig>)interface;
+@end
 
-
-/**
- 是否安装第三方APP
- @return YES 安装了， NO未安装
- */
-- (BOOL)isInstallAPPClient;
-
-
+@protocol QYShareAuthorDelegate<QYShareComponentDelegate>
 /**
  检测第三方平台是否已经授权
 
  @return YES 授权 ,NO 未授权
  */
 - (BOOL)hasAuthorized;
-
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation;
-
-
-
 /**
  发起授权
  */
 - (void)authoried;
-
-@property(nonatomic,assign)QYSharePlatform platform;
-@property(nonatomic,assign)QYShareType shareType;
-@property(nonatomic,weak)id<QYShareDelegate>delegate;
-@end
-
-@protocol QYShareToQQDelegate<QYShareComponentDelegate>
-
-@end
-
-@protocol QYShareToWXDelegate<QYShareComponentDelegate>
-
-@end
-
-@protocol QYShareToSinaDelegate<QYShareComponentDelegate>
-
 @end
