@@ -38,11 +38,11 @@
     QQApiObject * imageObject;
     if([self isShareToZone])
     {
-        imageObject = [self buildImageObject:interface];
+       imageObject = [self buildImageObjectForQQZone:interface];
     }
     else
     {
-        imageObject = [self buildImageObjectForQQZone:interface];
+         imageObject = [self buildImageObject:interface];
     }
     [self sendShareObject:imageObject];
 }

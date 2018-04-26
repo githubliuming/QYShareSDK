@@ -52,8 +52,8 @@ static QYShareRooter * static_rooter = nil;
     [self addComponent:qq forPlatform:QYSharePlatform_QQ_Friend];
     
     id<QYShareToWXDelegate> wx = [[WXShareComponent alloc] init];
-    [self addComponent:wx forPlatform:QYSharePlatform_WX_Contact];
     [self addComponent:wx forPlatform:QYSharePlatform_WX_TimerLine];
+    [self addComponent:wx forPlatform:QYSharePlatform_WX_Contact];
     
     id<QYShareToSinaDelegate> sina = [[SinaWBShareComponent alloc] init];
     [self addComponent:sina forPlatform:QYSharePlatform_SinaWB];

@@ -25,6 +25,16 @@
 		8A348EAD2057DA0000730BB8 /* SinaWBShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A348EAC2057DA0000730BB8 /* SinaWBShareComponent.m */; };
 		8A353D192058EFFE007CF2B5 /* QYShareTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A353D182058EFFE007CF2B5 /* QYShareTool.m */; };
 		8A353D1C20591FD2007CF2B5 /* FaceBookShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A353D1B20591FD2007CF2B5 /* FaceBookShareComponent.m */; };
+		8A3C2886209195D5002098BD /* 1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8A3C2883209195D5002098BD /* 1.mov */; };
+		8A3C2887209195D5002098BD /* IMG_0773.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 8A3C2884209195D5002098BD /* IMG_0773.MP4 */; };
+		8A3C2888209195D5002098BD /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A3C2885209195D5002098BD /* test.gif */; };
+		8A3C288B2091975E002098BD /* NXBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C288A2091975E002098BD /* NXBaseListViewController.m */; };
+		8A3C288F2091985B002098BD /* GifShareDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C288E2091985B002098BD /* GifShareDemoVC.m */; };
+		8A3C28922091986A002098BD /* LinkShareDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C28912091986A002098BD /* LinkShareDemoVC.m */; };
+		8A3C289520919883002098BD /* ImageShareDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C289420919883002098BD /* ImageShareDemoVC.m */; };
+		8A3C289820919B70002098BD /* PlatformList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C289720919B70002098BD /* PlatformList.m */; };
+		8A3C289B20919F3E002098BD /* QYShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C289A20919F3E002098BD /* QYShareModel.m */; };
+		8A3C289D2091B31F002098BD /* WechatIMG31.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3C289C2091B31F002098BD /* WechatIMG31.jpeg */; };
 		8A3EEA6E205A1BB60068A7F6 /* MessengerShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EEA6D205A1BB60068A7F6 /* MessengerShareComponent.m */; };
 		8A3EEA71205A21D50068A7F6 /* InstagramShareComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EEA70205A21D50068A7F6 /* InstagramShareComponent.m */; };
 		8A3EEA74205A24380068A7F6 /* TwitterShareComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EEA73205A24380068A7F6 /* TwitterShareComponet.m */; };
@@ -70,6 +80,22 @@
 		8A353D182058EFFE007CF2B5 /* QYShareTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYShareTool.m; sourceTree = "<group>"; };
 		8A353D1A20591FD2007CF2B5 /* FaceBookShareComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceBookShareComponent.h; sourceTree = "<group>"; };
 		8A353D1B20591FD2007CF2B5 /* FaceBookShareComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceBookShareComponent.m; sourceTree = "<group>"; };
+		8A3C2883209195D5002098BD /* 1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 1.mov; sourceTree = "<group>"; };
+		8A3C2884209195D5002098BD /* IMG_0773.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_0773.MP4; sourceTree = "<group>"; };
+		8A3C2885209195D5002098BD /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
+		8A3C28892091975E002098BD /* NXBaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXBaseListViewController.h; sourceTree = "<group>"; };
+		8A3C288A2091975E002098BD /* NXBaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXBaseListViewController.m; sourceTree = "<group>"; };
+		8A3C288D2091985B002098BD /* GifShareDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifShareDemoVC.h; sourceTree = "<group>"; };
+		8A3C288E2091985B002098BD /* GifShareDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifShareDemoVC.m; sourceTree = "<group>"; };
+		8A3C28902091986A002098BD /* LinkShareDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkShareDemoVC.h; sourceTree = "<group>"; };
+		8A3C28912091986A002098BD /* LinkShareDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkShareDemoVC.m; sourceTree = "<group>"; };
+		8A3C289320919883002098BD /* ImageShareDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageShareDemoVC.h; sourceTree = "<group>"; };
+		8A3C289420919883002098BD /* ImageShareDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageShareDemoVC.m; sourceTree = "<group>"; };
+		8A3C289620919B70002098BD /* PlatformList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformList.h; sourceTree = "<group>"; };
+		8A3C289720919B70002098BD /* PlatformList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformList.m; sourceTree = "<group>"; };
+		8A3C289920919F3E002098BD /* QYShareModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYShareModel.h; sourceTree = "<group>"; };
+		8A3C289A20919F3E002098BD /* QYShareModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYShareModel.m; sourceTree = "<group>"; };
+		8A3C289C2091B31F002098BD /* WechatIMG31.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG31.jpeg; sourceTree = "<group>"; };
 		8A3EEA6C205A1BB60068A7F6 /* MessengerShareComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessengerShareComponent.h; sourceTree = "<group>"; };
 		8A3EEA6D205A1BB60068A7F6 /* MessengerShareComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessengerShareComponent.m; sourceTree = "<group>"; };
 		8A3EEA6F205A21D50068A7F6 /* InstagramShareComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstagramShareComponent.h; sourceTree = "<group>"; };
@@ -148,6 +174,7 @@
 		8A348E9A2057AB4D00730BB8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8A3C2882209193B9002098BD /* testSource */,
 				8A353D162058EFEF007CF2B5 /* QYShareTool */,
 				8A348EA32057CD7900730BB8 /* QYComponent */,
 				8A348E9B2057AB7B00730BB8 /* QYShareConst.h */,
@@ -194,6 +221,34 @@
 			path = QYShareTool;
 			sourceTree = "<group>";
 		};
+		8A3C2882209193B9002098BD /* testSource */ = {
+			isa = PBXGroup;
+			children = (
+				8A3C289C2091B31F002098BD /* WechatIMG31.jpeg */,
+				8A3C2883209195D5002098BD /* 1.mov */,
+				8A3C2884209195D5002098BD /* IMG_0773.MP4 */,
+				8A3C2885209195D5002098BD /* test.gif */,
+			);
+			path = testSource;
+			sourceTree = "<group>";
+		};
+		8A3C288C20919842002098BD /* demos */ = {
+			isa = PBXGroup;
+			children = (
+				8A3C288D2091985B002098BD /* GifShareDemoVC.h */,
+				8A3C288E2091985B002098BD /* GifShareDemoVC.m */,
+				8A3C28902091986A002098BD /* LinkShareDemoVC.h */,
+				8A3C28912091986A002098BD /* LinkShareDemoVC.m */,
+				8A3C289320919883002098BD /* ImageShareDemoVC.h */,
+				8A3C289420919883002098BD /* ImageShareDemoVC.m */,
+				8A3C289620919B70002098BD /* PlatformList.h */,
+				8A3C289720919B70002098BD /* PlatformList.m */,
+				8A3C289920919F3E002098BD /* QYShareModel.h */,
+				8A3C289A20919F3E002098BD /* QYShareModel.m */,
+			);
+			path = demos;
+			sourceTree = "<group>";
+		};
 		A0C4ED631EDECD6A00E3C45C = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +275,9 @@
 				A0C4ED731EDECD6A00E3C45C /* AppDelegate.m */,
 				A0C4ED751EDECD6A00E3C45C /* ViewController.h */,
 				A0C4ED761EDECD6A00E3C45C /* ViewController.m */,
+				8A3C28892091975E002098BD /* NXBaseListViewController.h */,
+				8A3C288A2091975E002098BD /* NXBaseListViewController.m */,
+				8A3C288C20919842002098BD /* demos */,
 				A0C4ED781EDECD6A00E3C45C /* Main.storyboard */,
 				A0C4ED7B1EDECD6A00E3C45C /* Assets.xcassets */,
 				A0C4ED7D1EDECD6A00E3C45C /* LaunchScreen.storyboard */,
@@ -300,8 +358,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C4ED7F1EDECD6A00E3C45C /* LaunchScreen.storyboard in Resources */,
+				8A3C289D2091B31F002098BD /* WechatIMG31.jpeg in Resources */,
 				A0C4ED7C1EDECD6A00E3C45C /* Assets.xcassets in Resources */,
+				8A3C2886209195D5002098BD /* 1.mov in Resources */,
 				A0C4ED7A1EDECD6A00E3C45C /* Main.storyboard in Resources */,
+				8A3C2888209195D5002098BD /* test.gif in Resources */,
+				8A3C2887209195D5002098BD /* IMG_0773.MP4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,20 +431,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A76D1EA205B703300DAFC8F /* SystemShareComponet.m in Sources */,
+				8A3C288B2091975E002098BD /* NXBaseListViewController.m in Sources */,
 				A0C4ED771EDECD6A00E3C45C /* ViewController.m in Sources */,
 				8A3EEA6E205A1BB60068A7F6 /* MessengerShareComponent.m in Sources */,
 				8A3EEA74205A24380068A7F6 /* TwitterShareComponet.m in Sources */,
 				8A353D192058EFFE007CF2B5 /* QYShareTool.m in Sources */,
 				8A348EA72057D56D00730BB8 /* QQShareComponent.m in Sources */,
+				8A3C288F2091985B002098BD /* GifShareDemoVC.m in Sources */,
 				A0C4ED741EDECD6A00E3C45C /* AppDelegate.m in Sources */,
 				8A348EAD2057DA0000730BB8 /* SinaWBShareComponent.m in Sources */,
+				8A3C289820919B70002098BD /* PlatformList.m in Sources */,
 				8A353D1C20591FD2007CF2B5 /* FaceBookShareComponent.m in Sources */,
+				8A3C289B20919F3E002098BD /* QYShareModel.m in Sources */,
 				A0C4ED711EDECD6A00E3C45C /* main.m in Sources */,
 				8A76D1E7205B6D5A00DAFC8F /* MoreShareComponet.m in Sources */,
 				8A3EEA71205A21D50068A7F6 /* InstagramShareComponent.m in Sources */,
 				8A348E9E2057BDFE00730BB8 /* QYShareSever.m in Sources */,
+				8A3C28922091986A002098BD /* LinkShareDemoVC.m in Sources */,
 				8A348EA12057CB0A00730BB8 /* QYShareRooter.m in Sources */,
 				8A348EAA2057D9E500730BB8 /* WXShareComponent.m in Sources */,
+				8A3C289520919883002098BD /* ImageShareDemoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

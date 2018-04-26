@@ -28,7 +28,10 @@
 {
     self.appId = appId;
     self.secretKey = secretKey;
-     [WXApi registerApp:self.appId];
+    if (![WXApi registerApp:self.appId])
+    {    
+        NSLog(@"微信sdk 注册失败");
+    }
 }
 
 - (void)shareImage:(id<QYShareConfig>)interface
@@ -51,6 +54,7 @@
 }
 - (void)shareGif:(id<QYShareConfig>)interface
 {
+
     self.platform = QYSharePlatform_WX_Contact;
     WXEmoticonObject *ext = [self buildEmojeObject:interface];
     WXMediaMessage *message = [self buildWXMessage:ext with:interface];
@@ -81,8 +85,9 @@
     NSData * data = [QYShareTool scaleThumbImageData:image];
     if (data.length > 0)
     {
-     [message setThumbData:data];
+        [message setThumbData:data];
     }
+    message.mediaObject = ext;
     return message;
 }
 
@@ -111,6 +116,7 @@
     WXImageObject * ext;
     if (config)
     {
+        ext = [WXImageObject object];
         ext.imageData = UIImagePNGRepresentation([config.images firstObject]);
     }
     return ext;
@@ -120,15 +126,17 @@
     WXWebpageObject * ext;
     if (config)
     {
+        ext = [WXWebpageObject object];
         ext.webpageUrl = config.url;
     }
     return ext;
 }
 - (WXEmoticonObject *)buildEmojeObject:(id<QYShareConfig>)config
 {
-    WXEmoticonObject * ext;
+    WXEmoticonObject * ext ;
     if (config)
     {
+        ext = [WXEmoticonObject object];
         ext.emoticonData = [NSData dataWithContentsOfFile:config.gifPath];
     }
     return ext;

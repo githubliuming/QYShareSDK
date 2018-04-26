@@ -6,9 +6,9 @@
 //  Copyright © 2017年 burning. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "NXBaseListViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : NXBaseListViewController
 
 
 @end

@@ -88,6 +88,17 @@
             break;
     }
 }
+-(BOOL)hasAuthor:(QYSharePlatform)platform
+{
+    id<QYShareComponentDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
+    return [interface hasAuthorized];
+}
+-(void)authoried:(QYSharePlatform)platform
+{
+    id<QYShareComponentDelegate> interface = [[QYShareRooter shareInstanced] getShareInterfaceWithPlatform:platform];
+    [QYShareRooter shareInstanced].currentComponent = interface;
+    [interface authoried];
+}
 +(void)regesitDefaultComponent
 {
     [[QYShareRooter shareInstanced] registerDefualtComponent];
@@ -127,7 +138,6 @@
         {
             block(obj,obj.platform);
         }];
-        
     }
 }
 

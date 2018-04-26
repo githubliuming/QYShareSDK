@@ -30,6 +30,20 @@
           gifPath:(NSString *)gifPath
      platformType:(QYSharePlatform)platform
         shareType:(QYShareType)type;
+
+/**
+ 查看平台是否授权
+
+ @param platform 第三方平台
+ @return 授权结果
+ */
+-(BOOL)hasAuthor:(QYSharePlatform)platform;
+
+/**
+  第三方授权
+ @param platform 第三方平台
+ */
+-(void)authoried:(QYSharePlatform)platform;
 /**
  向路由表中注册新的组件
  @param interface 组件对象
